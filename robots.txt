@@ -1,0 +1,8 @@
+# PREVIEW MODE. Nothing links here yet and no custom domain is attached.
+# The canonical tags point at https://riseandbalance.net/ (not live yet).
+#
+# AT GO-LIVE: swap the two lines below. Delete the Disallow, uncomment the Allow.
+Disallow: /
+
+# Allow: /
+# Sitemap: https://riseandbalance.net/sitemap.xml

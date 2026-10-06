@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rise and Balance | Business systems consulting</title>
+<meta name="description" content="We map every place your business depends on you, then build and install the systems that get you out of the middle. Five clients at a time.">
+<link rel="canonical" href="https://riseandbalance.net/">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rise and Balance">
+<meta property="og:title" content="Rise and Balance | Business systems consulting">
+<meta property="og:description" content="We map every place your business depends on you, then build and install the systems that get you out of the middle.">
+<meta property="og:url" content="https://riseandbalance.net/">
+<style>
+  :root{
+    --ink:#1c1c1a;
+    --muted:#6b6862;
+    --bg:#fbf9f6;
+    --panel:#2a1b3d;
+    --panel-ink:#f2ede4;
+    --accent:#4a2e6b;
+    --gold:#c9a227;
+    --line:#e2ddd4;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:var(--sans);font-size:18px;line-height:1.65;
+  }
+  nav{
+    max-width:1080px;margin:0 auto;padding:26px 24px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    border-bottom:1px solid var(--line);
+  }
+  .brand{font-family:var(--serif);font-size:21px;letter-spacing:.01em;text-decoration:none;color:var(--ink);}
+  .brand span{color:var(--gold);}
+  .btn{
+    display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+    padding:13px 22px;border-radius:4px;font-size:15px;font-weight:600;letter-spacing:.01em;
+    border:1px solid var(--accent);
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
+  section{padding:56px 0;}
+  h1{
+    font-family:var(--serif);font-weight:600;letter-spacing:-.015em;
+    font-size:clamp(32px,5.6vw,52px);line-height:1.14;margin:0 0 22px;
+  }
+  h2{
+    font-family:var(--serif);font-weight:600;font-size:clamp(24px,3.4vw,32px);
+    line-height:1.22;margin:0 0 18px;letter-spacing:-.01em;
+  }
+  p{margin:0 0 18px;}
+  .lead{font-size:clamp(18px,2.2vw,21px);color:#33312e;}
+  .line{
+    font-family:var(--serif);font-size:clamp(20px,2.8vw,27px);line-height:1.4;
+    border-left:3px solid var(--gold);padding-left:20px;margin:30px 0 34px;color:#25231f;
+  }
+  .hero{padding:34px 0 20px;}
+  .hero .btn{margin-top:6px;}
+  .underbtn{font-size:15px;color:var(--muted);font-style:italic;margin-top:12px;}
+  ul.clean{list-style:none;padding:0;margin:0 0 18px;}
+  ul.clean li{padding:9px 0 9px 26px;position:relative;border-bottom:1px solid var(--line);}
+  ul.clean li:before{content:"";position:absolute;left:4px;top:19px;width:6px;height:6px;background:var(--gold);border-radius:50%;}
+  ol.num{counter-reset:n;list-style:none;padding:0;margin:0;}
+  ol.num li{counter-increment:n;padding:14px 0 14px 46px;position:relative;border-bottom:1px solid var(--line);}
+  ol.num li:before{
+    content:counter(n);position:absolute;left:0;top:13px;width:28px;height:28px;
+    background:var(--accent);color:#fff;border-radius:50%;font-size:14px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .panel{background:var(--panel);color:var(--panel-ink);padding:60px 0;}
+  .panel h2{color:#fff;}
+  .panel .eyebrow{color:var(--gold);}
+  .panel ol.num li{border-bottom-color:rgba(255,255,255,.14);}
+  .panel ol.num li:before{background:var(--gold);color:#20180a;}
+  .panel b{color:#fff;}
+  .eyebrow{
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;margin:0 0 14px;
+  }
+  .quote{
+    font-family:var(--serif);font-size:clamp(20px,2.7vw,26px);line-height:1.42;
+    text-align:center;margin:0 auto;max-width:640px;padding:8px 0;
+  }
+  .proof{background:#f3efe7;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:5px;padding:30px 28px;}
+  .proof a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(74,46,107,.35);}
+  .steps{display:grid;gap:0;}
+  .step{border-top:1px solid var(--line);padding:22px 0;}
+  .step:last-child{border-bottom:1px solid var(--line);}
+  .step .k{font-family:var(--serif);font-size:20px;}
+  .cta-band{background:var(--accent);color:#fff;padding:64px 0;}
+  .cta-band h2{color:#fff;}
+  .cta-band .btn{background:#fff;color:var(--accent);border-color:#fff;font-size:17px;padding:16px 30px;}
+  .cta-band .underbtn{color:#d8cfe4;}
+  footer{padding:44px 0 60px;color:var(--muted);font-size:14px;}
+  footer a{color:var(--muted);}
+  footer .brand{color:var(--muted);font-size:16px;}
+  @media (max-width:560px){
+    section{padding:42px 0;}
+    nav{padding:18px 18px;}
+    .btn{padding:12px 16px;font-size:14px;}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://riseandbalance.net/#organization",
+      "name": "Rise and Balance",
+      "url": "https://riseandbalance.net/",
+      "description": "A business systems consultancy. We map every place a business depends on its owner, then build and install the systems that remove the ones that never needed to be the owner's.",
+      "slogan": "Balance is not a mindset. It is what is left over once the business stops running on you.",
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "knowsAbout": [
+        "owner dependency in small business",
+        "business operating systems",
+        "process documentation and standard operating procedures",
+        "role design and delegation",
+        "business automation",
+        "AI agents for small business",
+        "meeting rhythm and management cadence",
+        "entity and search visibility"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://riseandbalance.net/#website",
+      "url": "https://riseandbalance.net/",
+      "name": "Rise and Balance",
+      "publisher": { "@id": "https://riseandbalance.net/#organization" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://riseandbalance.net/#webpage",
+      "url": "https://riseandbalance.net/",
+      "name": "Rise and Balance | Business systems consulting",
+      "isPartOf": { "@id": "https://riseandbalance.net/#website" },
+      "about": { "@id": "https://riseandbalance.net/#organization" },
+      "description": "We map every place your business depends on you, then build and install the systems that get you out of the middle.",
+      "inLanguage": "en-US"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="/">Rise <span>and</span> Balance</a>
+  <a class="btn" href="#book">Book the conversation</a>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Your business should not need you standing in the middle of it.</h1>
+    <p class="lead">We find every place your business depends on you personally, and then we remove the ones that never needed to be yours.</p>
+    <p class="line">Balance is not a mindset. It is what is left over once the business stops running on you.</p>
+    <a class="btn" href="#book">Book the conversation</a>
+    <p class="underbtn">Bring one question with you: where does your business stop when you do?</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">The problem</p>
+    <h2>You take a day off and spend it on your phone.</h2>
+    <p>You go away and you are still the one they call. Somebody leaves and you quietly absorb the job without deciding to. You have a business, and the business has you.</p>
+    <p>Here is what most people get told about this: work on your mindset, get more disciplined, learn to delegate, find your why.</p>
+    <p>None of that is wrong. None of it is the problem either.</p>
+    <p><b>The problem is structural, and it has a shape you can see once somebody actually looks.</b></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">What we do</p>
+    <h2>We do not start with what your business should look like. We start with where it actually breaks.</h2>
+    <p>Over about two weeks we trace where the business depends on you personally:</p>
+    <ul class="clean">
+      <li>Your inbox, and how much of it needs you specifically</li>
+      <li>Every interruption, and whether anyone else could have handled it</li>
+      <li>What needs your yes before it can move</li>
+      <li>What only you know</li>
+      <li>What happens when something goes wrong, and who gets called</li>
+      <li>Which customers and vendors will only deal with you</li>
+    </ul>
+    <p>You end up holding one document: <b>a ranked list of every place the business stops when you do, with a number at the top.</b></p>
+    <p>Here is what the top of that list looks like:</p>
+    <p style="font-style:italic;color:#3d3b37;">You have 43 points where this business depends on you. Nine of them stop everything the moment you are unreachable.</p>
+    <p>Your numbers will be yours. Most owners have never seen theirs written down, and almost all of them find something on the list they did not know was on them.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">What we promise</p>
+    <ol class="num">
+      <li><b>We will map, in writing, every place your business depends on you.</b> You see it on paper before we change anything.</li>
+      <li><b>We will build and install at least one working system before we finish.</b> Not a plan for one.</li>
+      <li><b>We will document the handoff,</b> so it keeps working after we are gone.</li>
+      <li><b>We will measure before and after</b> on the things we changed, and show you both numbers.</li>
+      <li><b>We will tell you which parts we are not touching,</b> and why.</li>
+    </ol>
+  </div>
+</section>
+
+<div class="panel">
+  <div class="wrap">
+    <p class="eyebrow">What we will not promise</p>
+    <h2>This part is the reason to trust the rest of it.</h2>
+    <p style="color:#c9d6cf;">Almost nobody puts this on a website.</p>
+    <ol class="num">
+      <li><b>We do not promise revenue.</b> We build the system that lets you run the business. The market decides the rest. If someone promises you growth, ask what they charge you when it does not arrive.</li>
+      <li><b>We do not promise the business runs without you.</b> Some things should stay with the owner, because the owner is the only one who should be doing them. We will tell you which ones.</li>
+      <li><b>We do not promise balance as a feeling.</b> It is not a mindset we install. It is what is left over.</li>
+      <li><b>We do not promise speed.</b> A system installed in a weekend is one you will undo in a month.</li>
+      <li><b>We will say no.</b> If your problem is not a system problem, we will tell you and pass on the work.</li>
+    </ol>
+    <p style="color:#c9d6cf;margin-top:26px;margin-bottom:10px;">Our own standard, published:</p>
+    <p class="quote" style="text-align:left;color:#fff;margin-left:0;">If we cannot name one system we installed, and you cannot point at it running, we failed. We will say so in writing, and you should not pay for that part.</p>
+    <p style="color:#c9d6cf;margin-top:22px;">There is a longer list, including the things we refuse to do and the work that belongs to a licensed professional. <a href="/what-we-do-and-do-not-do/" style="color:#c9a227;">Read it here.</a></p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Proof</p>
+    <h2>We did not build this on a theory. We built it on a real business.</h2>
+    <div class="proof">
+      <p style="margin-bottom:10px;"><b>Bellas Mountain Vacation Cleaning</b> runs on this method.</p>
+      <p style="margin-bottom:0;">Real customers, real bookings, real turnovers, and a systems stack built the same way we will build yours. <a href="https://bellasmountainvacationcleaning.com/">Go and look at it</a>, because it is the whole argument.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Who this is for</p>
+    <h2>Owner-operators, and companies that already have managers.</h2>
+    <p>Any industry. Anywhere in the country. The problem does not care what you sell.</p>
+    <p><b>We take five clients at a time.</b> Sometimes fewer, if one of them is large. That is deliberate. This work lives in the details, and the details do not scale by adding people.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">The method</p>
+    <h2>The Rise and Balance System</h2>
+    <div class="steps">
+      <div class="step"><div class="k">1. Map it.</div>Find every place the business depends on you, and rank them by what actually stops.</div>
+      <div class="step"><div class="k">2. Remove the worst ones.</div>Build and install the systems, starting with the ones that stop everything.</div>
+      <div class="step"><div class="k">3. Hand it over.</div>Document it, measure it, and make sure it runs when we are not there.</div>
+    </div>
+    <p style="margin-top:22px;">That is the whole method. We are not going to dress it up.</p>
+  </div>
+</section>
+
+<div class="cta-band" id="book">
+  <div class="wrap">
+    <h2>Book the conversation</h2>
+    <p>Thirty minutes. No slides.</p>
+    <!-- BOOKING LINK GOES HERE: Cal.com or Calendly free tier -->
+    <a class="btn" href="#book">Book the conversation</a>
+    <p class="underbtn" style="margin-top:18px;">The form asks three things and nothing else: your name, your email, and one question.</p>
+    <p class="quote" style="text-align:left;margin:18px 0 0 0;color:#fff;">Where does your business depend on you most right now?</p>
+    <p style="color:#d8cfe4;margin-top:14px;">That question is the whole point. Answer it and we arrive already knowing where to start, instead of spending the first twenty minutes finding out.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">Rise and Balance</div>
+    <p style="margin-top:10px;">Rise and Balance LLC. <a href="/what-we-do-and-do-not-do/">What we do, and what we do not do</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
