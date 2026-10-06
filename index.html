@@ -66,15 +66,20 @@
   /* ---------- hero ---------- */
   .hero{position:relative;overflow:hidden;padding:38px 0 26px;}
   .hero .wrap{position:relative;z-index:2;}
+  /* Decoration lives inside a clipping box, so a 760px sunburst can never
+     widen the document on a 360px phone. This was a real overflow bug:
+     the un-clipped sunburst set the document width to ~820px, every .wrap
+     laid out at its 760px max, and the whole page rendered clipped. */
+  .hero-deco{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1;}
   .sunburst{
     position:absolute;left:50%;top:-190px;transform:translateX(-50%);
-    width:760px;height:760px;border-radius:50%;z-index:1;pointer-events:none;
+    width:760px;height:760px;border-radius:50%;
     background:
       radial-gradient(circle, rgba(201,162,39,.30) 0%, rgba(201,162,39,.16) 30%, rgba(201,162,39,.05) 48%, transparent 64%);
   }
   .rays{
     position:absolute;left:50%;top:-150px;transform:translateX(-50%);
-    width:820px;height:820px;z-index:1;pointer-events:none;opacity:.5;
+    width:820px;height:820px;opacity:.5;
   }
   .line{
     font-size:clamp(21px,2.9vw,28px);line-height:1.42;
@@ -162,7 +167,8 @@
     .btn{padding:11px 16px;font-size:15px;}
     .pillars .row{gap:26px 30px;}
     .wave svg{height:44px;}
-    .ray-s{display:none;}
+    .sunburst{width:520px;height:520px;top:-140px;}
+    .rays{width:560px;height:560px;top:-110px;}
   }
 </style>
 <script type="application/ld+json">
@@ -236,7 +242,8 @@
 </nav>
 
 <header class="hero">
-  <div class="sunburst"></div>
+  <div class="hero-deco">
+    <div class="sunburst"></div>
   <svg class="rays" viewBox="0 0 200 200" aria-hidden="true">
     <g stroke="#c9a227" stroke-width="0.7" stroke-linecap="round">
       <line x1="100" y1="100" x2="100" y2="14"/>
@@ -265,6 +272,7 @@
       <line x1="100" y1="100" x2="100" y2="14" transform="rotate(345 100 100)"/>
     </g>
   </svg>
+  </div>
   <div class="wrap">
     <h1>Your business should not need you standing in the middle of it.</h1>
     <p class="lead">We find every place your business depends on you personally, and then we remove the ones that never needed to be yours.</p>
