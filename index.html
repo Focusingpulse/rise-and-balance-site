@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
+<script>document.documentElement.className='js';</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rise and Balance | Business systems consulting</title>
@@ -84,16 +85,20 @@
      this was originally blamed for (2026-10-06) turned out to be an artifact of
      a Windows screenshot that cropped a 492px layout into a 390px PNG. The
      structure is still right, it just was not the bug. */
+  /* Centred with margin-left, NOT translateX(-50%), so the transform channel
+     stays free for the parallax writer. */
   .hero-deco{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1;}
   .sunburst{
-    position:absolute;left:50%;top:-190px;transform:translateX(-50%);
-    width:760px;height:760px;border-radius:50%;
+    --w:760px;
+    position:absolute;left:50%;top:-190px;width:var(--w);height:var(--w);
+    margin-left:calc(var(--w) / -2);border-radius:50%;
     background:
       radial-gradient(circle, rgba(244,209,116,.58) 0%, rgba(243,200,96,.30) 30%, rgba(243,200,96,.11) 48%, transparent 66%);
   }
   .rays{
-    position:absolute;left:50%;top:-150px;transform:translateX(-50%);
-    width:820px;height:820px;opacity:.55;
+    --w:820px;
+    position:absolute;left:50%;top:-150px;width:var(--w);height:var(--w);
+    margin-left:calc(var(--w) / -2);opacity:.55;
   }
   .line{
     font-size:clamp(21px,2.9vw,28px);line-height:1.42;
@@ -139,8 +144,25 @@
   .ridge{display:block;line-height:0;margin:0;}
   .ridge svg{display:block;width:100%;height:80px;}
 
-  /* ---------- pillars band (from the brand card) ---------- */
-  .pillars{background:var(--purple-deep);padding:34px 0 42px;text-align:center;}
+  /* ---------- pillars band: the "Balance" descent, from the brand card ---------- */
+  .pillars{position:relative;overflow:hidden;background:var(--purple-deep);padding:18px 0 52px;text-align:center;}
+  .pillars .land{position:absolute;left:0;right:0;bottom:0;height:440px;overflow:hidden;pointer-events:none;z-index:0;}
+  .pillars .land svg{position:absolute;left:0;bottom:-40px;width:100%;}
+  .pillars .l-back{height:330px;opacity:.6;}
+  .pillars .l-front{height:250px;opacity:.92;}
+  .pillars .row, .pillars .tagline, .pillars .balance-word{position:relative;z-index:2;}
+  .pillars .balance-word{
+    font-family:var(--script);line-height:1;
+    font-size:clamp(58px,12vw,124px);
+    margin:14px 0 24px;padding:0;
+  }
+  .goldtype{color:#efdca4;}
+  @supports (-webkit-background-clip:text) or (background-clip:text){
+    .goldtype{
+      background:linear-gradient(180deg,#fdf4cd 0%,#e8d183 45%,#bd931f 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+  }
   .pillars .row{
     display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;
     gap:34px 52px;max-width:900px;margin:0 auto;padding:0 20px;
@@ -174,6 +196,32 @@
   footer .fline{margin:0 0 10px;}
   footer .fsig{font-family:var(--script);font-size:26px;color:var(--gold-light);margin:0 0 16px;}
 
+  /* ---------- scroll reveals + parallax ----------
+     Everything here is gated on .js, which is set by an inline script in the
+     head. With JavaScript off the class stays "no-js" and every element is
+     fully visible. Content is never hidden by a stylesheet alone. */
+  .js .rv{
+    opacity:0;
+    transition:opacity .8s cubic-bezier(.22,.68,.32,1),
+               transform .8s cubic-bezier(.22,.68,.32,1),
+               filter .8s ease;
+    transform:translate3d(0,26px,0);
+  }
+  .js .rv-l{transform:translate3d(-40px,0,0);}
+  .js .rv-r{transform:translate3d(40px,0,0);}
+  .js .rv-d{transform:translate3d(0,-26px,0);}
+  .js .rv-bg{transform:translate3d(0,16px,0) scale(.93);filter:blur(7px);}
+  .js .rv.in{opacity:1;transform:none;filter:none;}
+  .js [data-par]{will-change:transform;}
+
+  @media (prefers-reduced-motion: reduce){
+    .js .rv, .js .rv-l, .js .rv-r, .js .rv-d, .js .rv-bg{
+      opacity:1 !important;transform:none !important;filter:none !important;
+      transition:none !important;
+    }
+    .js [data-par]{transform:none !important;}
+  }
+
   @media (max-width:620px){
     section{padding:40px 0;}
     nav .navin{padding:14px 18px;flex-wrap:wrap;}
@@ -181,8 +229,8 @@
     .btn{padding:11px 16px;font-size:15px;}
     .pillars .row{gap:26px 30px;}
     .ridge svg{height:52px;}
-    .sunburst{width:520px;height:520px;top:-140px;}
-    .rays{width:560px;height:560px;top:-110px;}
+    .sunburst{--w:520px;top:-140px;}
+    .rays{--w:560px;top:-110px;}
   }
 </style>
 <script type="application/ld+json">
@@ -409,6 +457,15 @@
 </div>
 
 <div class="pillars">
+  <div class="land" aria-hidden="true">
+    <svg class="l-back" data-par="0.20" viewBox="0 0 1440 330" preserveAspectRatio="none">
+      <path d="M0,330 L0,214 L168,118 L336,196 L520,78 L700,182 L880,104 L1060,200 L1240,118 L1440,196 L1440,330 Z" fill="#43286b"/>
+    </svg>
+    <svg class="l-front" data-par="-0.07" viewBox="0 0 1440 250" preserveAspectRatio="none">
+      <path d="M0,250 L0,158 L132,92 L286,168 L462,72 L638,158 L814,104 L990,178 L1166,98 L1342,168 L1440,116 L1440,250 Z" fill="#1d0f30"/>
+    </svg>
+  </div>
+  <p class="balance-word goldtype">Balance</p>
   <div class="row">
     <div class="pillar">
       <svg viewBox="0 0 40 26" aria-hidden="true">
@@ -484,6 +541,8 @@
     <p class="fline"><a href="mailto:Riseandbalance101@gmail.com">Riseandbalance101@gmail.com</a> &#183; <a href="tel:+19702128485">970-212-8485</a></p>
   </div>
 </footer>
+
+<script src="js/site.js" defer></script>
 
 </body>
 </html>

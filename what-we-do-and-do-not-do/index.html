@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
+<script>document.documentElement.className='js';</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>What we do, and what we do not do | Rise and Balance</title>
@@ -88,6 +89,27 @@
   footer a{color:var(--purple-soft);}
   footer .fsig{font-family:var(--script);font-size:26px;color:var(--gold-light);margin:0 0 14px;}
   footer .fline{margin:0 0 8px;}
+  /* ---------- scroll reveals (JS-gated, reduced-motion safe) ---------- */
+  .js .rv{
+    opacity:0;
+    transition:opacity .8s cubic-bezier(.22,.68,.32,1),
+               transform .8s cubic-bezier(.22,.68,.32,1),
+               filter .8s ease;
+    transform:translate3d(0,26px,0);
+  }
+  .js .rv-l{transform:translate3d(-40px,0,0);}
+  .js .rv-r{transform:translate3d(40px,0,0);}
+  .js .rv-d{transform:translate3d(0,-26px,0);}
+  .js .rv-bg{transform:translate3d(0,16px,0) scale(.93);filter:blur(7px);}
+  .js .rv.in{opacity:1;transform:none;filter:none;}
+
+  @media (prefers-reduced-motion: reduce){
+    .js .rv, .js .rv-l, .js .rv-r, .js .rv-d, .js .rv-bg{
+      opacity:1 !important;transform:none !important;filter:none !important;
+      transition:none !important;
+    }
+  }
+
   @media (max-width:620px){
     section{padding:34px 0;}
     nav .navin{padding:14px 18px;flex-wrap:wrap;}
@@ -222,6 +244,8 @@
     <p class="fline"><a href="mailto:Riseandbalance101@gmail.com">Riseandbalance101@gmail.com</a> &#183; <a href="tel:+19702128485">970-212-8485</a></p>
   </div>
 </footer>
+
+<script src="../js/site.js" defer></script>
 
 </body>
 </html>
