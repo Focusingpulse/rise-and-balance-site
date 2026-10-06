@@ -66,10 +66,11 @@
   /* ---------- hero ---------- */
   .hero{position:relative;overflow:hidden;padding:38px 0 26px;}
   .hero .wrap{position:relative;z-index:2;}
-  /* Decoration lives inside a clipping box, so a 760px sunburst can never
-     widen the document on a 360px phone. This was a real overflow bug:
-     the un-clipped sunburst set the document width to ~820px, every .wrap
-     laid out at its 760px max, and the whole page rendered clipped. */
+  /* Decoration lives inside a clipping box so an oversized sunburst can never
+     contribute to document width. Kept as defensive containment. The overflow
+     this was originally blamed for (2026-10-06) turned out to be an artifact of
+     a Windows screenshot that cropped a 492px layout into a 390px PNG. The
+     structure is still right, it just was not the bug. */
   .hero-deco{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1;}
   .sunburst{
     position:absolute;left:50%;top:-190px;transform:translateX(-50%);
