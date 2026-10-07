@@ -226,7 +226,10 @@
     section{padding:40px 0;}
     nav .navin{padding:14px 18px;flex-wrap:wrap;}
     .brand .word{font-size:25px;}
-    .btn{padding:11px 16px;font-size:15px;}
+    /* Thumb zone: primary buttons sit on the RIGHT on a phone so a right
+       thumb reaches them without crossing the screen. Set on the button
+       itself, never on the container, so body copy stays left-aligned. */
+    .btn{padding:11px 16px;font-size:15px;display:block;width:fit-content;margin-left:auto;margin-right:0;}
     .pillars .row{gap:26px 30px;}
     .ridge svg{height:52px;}
     .sunburst{--w:520px;top:-140px;}
@@ -307,8 +310,12 @@
 
 <header class="hero">
   <div class="hero-deco">
-    <div class="sunburst"></div>
-  <svg class="rays" viewBox="0 0 200 200" aria-hidden="true">
+    <!-- Reverse parallax: the sun and its light rise as you scroll down.
+         A NEGATIVE factor makes an element outrun the scroll, so the sun
+         climbs out of frame instead of settling into it. The rays move a
+         little slower than the glow, which keeps depth between them. -->
+    <div class="sunburst" data-par="-0.45"></div>
+  <svg class="rays" data-par="-0.34" viewBox="0 0 200 200" aria-hidden="true">
     <g stroke="#c9a227" stroke-width="0.7" stroke-linecap="round">
       <line x1="100" y1="100" x2="100" y2="14"/>
       <line x1="100" y1="100" x2="100" y2="14" transform="rotate(15 100 100)"/>
