@@ -13,6 +13,13 @@
 <meta property="og:title" content="Rise and Balance | Business systems consulting">
 <meta property="og:description" content="We map every place your business depends on you, then build and install the systems that get you out of the middle.">
 <meta property="og:url" content="https://riseandbalance.net/">
+<meta property="og:image" content="https://riseandbalance.net/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -192,6 +199,24 @@
     margin-top:26px;border-top:1px solid rgba(255,255,255,.22);padding-top:22px;
     color:#dcd0e8;
   }
+  /* ---------- the booking form ----------
+     A real, semantic form so that a person and an AI agent can both complete it.
+     Proper <label> elements, name attributes, and a standard submit button.
+     Inputs are 17px so iOS Safari does not zoom the page when one is focused. */
+  .bookform{max-width:540px;margin:8px 0 0;}
+  .bookform .fld{margin:0 0 15px;}
+  .bookform label{display:block;font-size:15px;color:#dcd0e8;margin:0 0 6px;}
+  .bookform input[type=text],
+  .bookform input[type=email],
+  .bookform textarea{
+    width:100%;box-sizing:border-box;padding:11px 13px;
+    font-family:var(--serif);font-size:17px;line-height:1.5;color:var(--ink);
+    background:#fff;border:1px solid #b9a7d6;border-radius:2px;
+  }
+  .bookform textarea{resize:vertical;}
+  .bookform input:focus,.bookform textarea:focus{outline:2px solid var(--gold);outline-offset:1px;}
+  .bookform .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+  .bookform button.btn{font-family:var(--serif);cursor:pointer;}
 
   /* ---------- footer ---------- */
   footer{background:var(--purple-deep);color:var(--purple-soft);font-size:15px;padding:40px 0 52px;}
@@ -247,9 +272,21 @@
       "@type": "Organization",
       "@id": "https://riseandbalance.net/#organization",
       "name": "Rise and Balance",
+      "legalName": "Rise and Balance LLC",
       "url": "https://riseandbalance.net/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://riseandbalance.net/#logo",
+        "url": "https://riseandbalance.net/icon-512.png",
+        "contentUrl": "https://riseandbalance.net/icon-512.png",
+        "width": 512,
+        "height": 512,
+        "caption": "Rise and Balance"
+      },
+      "image": { "@id": "https://riseandbalance.net/#logo" },
       "description": "A business systems consultancy. We map every place a business depends on its owner, then build and install the systems that remove the ones that never needed to be the owner's.",
       "slogan": "Balance is not a mindset. It is what is left over once the business stops running on you.",
+      "foundingDate": "2026-10-03",
       "email": "Riseandbalance101@gmail.com",
       "telephone": "+1-970-212-8485",
       "contactPoint": {
@@ -270,6 +307,38 @@
         "AI agents for small business",
         "meeting rhythm and management cadence",
         "entity and search visibility"
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "@id": "https://riseandbalance.net/#owner-dependency-map",
+            "name": "The owner dependency map",
+            "serviceType": "Business operations diagnostic",
+            "description": "Over about two weeks we trace every place the business depends on the owner personally, and hand back one document: a ranked list of every place the business stops when the owner does, with a number at the top.",
+            "provider": { "@id": "https://riseandbalance.net/#organization" },
+            "areaServed": { "@type": "Country", "name": "United States" },
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://riseandbalance.net/#book",
+              "servicePhone": "+1-970-212-8485",
+              "availableLanguage": "English"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "@id": "https://riseandbalance.net/#install-and-handover",
+            "name": "The install and the handoff",
+            "serviceType": "Business systems installation",
+            "description": "We build and install at least one working system before the engagement finishes, starting with whatever stops everything first. Systems are documented, measured before and after, and handed over so they keep running once we are gone.",
+            "provider": { "@id": "https://riseandbalance.net/#organization" },
+            "areaServed": { "@type": "Country", "name": "United States" }
+          }
+        }
       ]
     },
     {
@@ -287,6 +356,7 @@
       "name": "Rise and Balance | Business systems consulting",
       "isPartOf": { "@id": "https://riseandbalance.net/#website" },
       "about": { "@id": "https://riseandbalance.net/#organization" },
+      "primaryImageOfPage": { "@id": "https://riseandbalance.net/#logo" },
       "description": "We map every place your business depends on you, then build and install the systems that get you out of the middle.",
       "inLanguage": "en-US"
     }
@@ -305,6 +375,8 @@
     <a class="btn" href="#book">Book the conversation</a>
   </div>
 </nav>
+
+<main id="main">
 
 <header class="hero">
   <div class="hero-deco">
@@ -531,11 +603,37 @@
     <div class="rule"></div>
     <h2>Book the conversation</h2>
     <p>Thirty minutes. No slides.</p>
-    <!-- INTERIM CTA. Replace with a Cal.com or Calendly link when the booking tool exists. -->
-    <a class="btn" href="mailto:Riseandbalance101@gmail.com?subject=Book%20the%20conversation&amp;body=Where%20does%20your%20business%20depend%20on%20you%20most%20right%20now%3F">Book the conversation</a>
-    <p class="underbtn" style="margin-top:18px;">Send us three things and nothing else: your name, your email, and one question.</p>
-    <p class="quote" style="text-align:left;margin:18px 0 0 0;color:#fff;">Where does your business depend on you most right now?</p>
-    <p style="color:#dcd0e8;margin-top:14px;">That question is the whole point. Answer it and we arrive already knowing where to start, instead of spending the first twenty minutes finding out.</p>
+
+    <!--
+      A REAL FORM, so that a person and an AI agent can both complete it.
+      ⚠ THE ACTION IS A PLACEHOLDER. Replace REPLACE_WITH_YOUR_FORM_ID with the
+      endpoint from a form service before this site goes live, or the form will
+      post nowhere. Formspree's free tier is the recommendation.
+    -->
+    <form class="bookform" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
+      <div class="fld">
+        <label for="f-name">Your name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="fld">
+        <label for="f-email">Your email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="fld">
+        <label for="f-question">Where does your business depend on you most right now?</label>
+        <textarea id="f-question" name="question" rows="3" required></textarea>
+      </div>
+      <!-- Honeypot. Hidden from people and from assistive technology; a bot will fill it. -->
+      <div class="hp" aria-hidden="true">
+        <label for="f-gotcha">Leave this empty</label>
+        <input id="f-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <input type="hidden" name="_subject" value="Rise and Balance: new booking request">
+      <button class="btn" type="submit">Book the conversation</button>
+    </form>
+
+    <p class="underbtn" style="margin-top:18px;">Three fields and nothing else: your name, your email, and that one question.</p>
+    <p style="color:#dcd0e8;margin-top:14px;">The question is the whole point. Answer it and we arrive already knowing where to start, instead of spending the first twenty minutes finding out.</p>
     <p class="contact-block">
       Prefer to just write or call?<br>
       Email <a class="plain" href="mailto:Riseandbalance101@gmail.com">Riseandbalance101@gmail.com</a><br>
@@ -543,6 +641,8 @@
     </p>
   </div>
 </div>
+
+</main>
 
 <footer>
   <div class="wrap">
