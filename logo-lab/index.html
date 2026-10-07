@@ -10,11 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
   :root{
-    --purple-deep:#2e1a4a; --purple:#4e2a84; --purple-bright:#6b3fa0;
-    --gold:#c9a227; --gold-light:#ebd79a; --cream:#fbf7f0; --cream-2:#f4ede2;
-    --ink:#241a33; --line:#e4d9c8;
-    --serif:"EB Garamond",Garamond,Georgia,serif;
-    --script:"Great Vibes",cursive;
+    --purple-deep:#2e1a4a; --purple:#4e2a84; --gold:#c9a227; --gold-light:#ebd79a;
+    --cream:#fbf7f0; --cream-2:#f4ede2; --ink:#241a33; --line:#e4d9c8;
+    --serif:"EB Garamond",Garamond,Georgia,serif; --script:"Great Vibes",cursive;
   }
   *{box-sizing:border-box;}
   body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.6;}
@@ -23,19 +21,21 @@
   header h1{margin:0;color:#f0e0ac;font-family:var(--script);font-size:44px;font-weight:400;}
   header p{margin:8px 0 0;color:#c8b4de;font-size:15px;}
   .note{background:#fff6e0;border-left:3px solid var(--gold);padding:14px 18px;margin:26px 0;font-size:15px;}
+  .warn{background:#fdf0ee;border-left:3px solid #c0392b;padding:14px 18px;margin:20px 0;font-size:15px;}
+  .ask{background:#eef4fd;border-left:3px solid #2b6cb0;padding:14px 18px;margin:20px 0;font-size:15px;}
   .roundband{background:var(--cream-2);border:1px solid var(--line);border-left:3px solid var(--purple);padding:14px 18px;margin:34px 0 8px;}
   .roundband h2{margin:0;font-size:22px;}
   .roundband p{margin:5px 0 0;color:#6e6379;font-size:15px;}
   section{padding:26px 0;border-bottom:1px solid var(--line);}
   h3{font-size:20px;margin:0 0 4px;}
   .sub{color:#6e6379;font-size:15px;margin:0 0 18px;}
-  .sizes{display:flex;align-items:flex-end;gap:36px;flex-wrap:wrap;}
+  .sizes{display:flex;align-items:flex-end;gap:30px;flex-wrap:wrap;}
   .cell{display:flex;flex-direction:column;align-items:center;gap:10px;}
   .cap{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8a7f95;}
   .onlight{background:#fff;border:1px solid var(--line);padding:14px 18px;}
-  .ondark{background:var(--purple-deep);padding:14px 18px;}
-  .ondark .cap{color:#9c8bb5;}
-  .old{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-end;}
+  .ondark{background:#130d2f;padding:14px 18px;border:1px solid #2a1f52;}
+  .ondark .cap{color:#7d6fa8;}
+  .old{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-end;}
   footer{padding:30px 0 60px;color:#6e6379;font-size:14px;}
 </style>
 </head>
@@ -50,151 +50,185 @@
 
 <div class="wrap">
 
-  <p class="note"><b>Round 3 is this round of adjustments.</b> The sun now comes out of the <b>foot</b> of the R and the light spreads from there. The mountains sit <b>inside the B</b>, in its own holes, and stay there. Every mark was rendered and looked at before it went on this page, so what you see here is what is actually there.</p>
+  <p class="note"><b>Round 4 is your reference.</b> Gold R on a sunburst, purple B holding mountains, the name underneath. Drawn as flat vector rather than as a rendered picture, because that is what a working logo has to be.</p>
 
-  <!-- ======================= ROUND 3 ======================= -->
+  <div class="warn">
+    <b>One thing I have to flag before this goes further.</b> If that reference image came out of an AI image generator, do not adopt it as the logo. Two practical reasons. In the United States a work generated entirely by a machine, with no human authorship, <b>cannot be copyrighted</b>, so the logo would not be protectable. And the mountain inside the B looks like a photograph, which if it is one belongs to somebody. Tell me where the image came from and I will tell you whether it is safe to build on. Either way, everything below was drawn from scratch.
+  </div>
+
+  <div class="ask">
+    <b>And one question I need you to settle, because your reference and your instruction disagree.</b> Your instruction was: the mountains stay inside the B, in its holes, and do not go past it. Your reference picture has the range running through the B <i>and continuing out to the right of it</i>. I have built both, 4A and 4B. Tell me which one you meant and I will drop the other.
+  </div>
+
+  <!-- ======================= ROUND 4 ======================= -->
   <div class="roundband">
-    <h2>Round 3 &mdash; sun at the foot of the R, mountains in the B's holes</h2>
-    <p>The two changes you asked for, plus a variant of each.</p>
+    <h2>Round 4 &mdash; the reference direction</h2>
+    <p>Gold letterforms, sunburst behind the R, mountains in the B.</p>
   </div>
 
   <section>
-    <h3>3A &mdash; sun at the foot, one ridge in the lower hole</h3>
-    <p class="sub">The light spreads from the base of the R, so the letter is standing on a sunrise rather than wearing one. The B carries a single gold ridge in its lower hole, contained by the letter.</p>
+    <h3>4A &mdash; mountains held inside the B only</h3>
+    <p class="sub">Your original instruction. The ridge lives in the B's holes and stops at the letter. Cleanest for a logo, because the letter still reads as a letter.</p>
     <div class="sizes">
-      <div class="onlight"><div class="cell">
-        <svg width="220" height="150" viewBox="0 0 220 150" role="img" aria-label="Sun at the foot of the R, ridge in the B's lower hole">
-          <defs>
-            <clipPath id="k3a"><rect x="125" y="105" width="42" height="28"/></clipPath>
-            <linearGradient id="g3a" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#f3e0a4"/><stop offset="45%" stop-color="#e0c268"/><stop offset="100%" stop-color="#b08c17"/>
-            </linearGradient>
-          </defs>
-          <g stroke="#c9a227" stroke-width="2.4" stroke-linecap="round">
-            <line x1="52" y1="126" x2="52" y2="78"/><line x1="52" y1="126" x2="52" y2="78" transform="rotate(34 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="78" transform="rotate(-34 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="84" transform="rotate(66 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="84" transform="rotate(-66 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="94" transform="rotate(98 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="94" transform="rotate(-98 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="104" transform="rotate(130 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="104" transform="rotate(-130 52 126)"/>
-          </g>
-          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="url(#g3a)">R</text>
-          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
-          <g clip-path="url(#k3a)">
-            <path d="M125,133 L134,111 L143,123 L152,99 L162,128 L166,118 L166,133 Z" fill="#c9a227"/>
-          </g>
-          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="none" stroke="#4e2a84" stroke-width="2">B</text>
-        </svg>
-        <span class="cap">large</span>
-      </div></div>
-
-      <div class="onlight"><div class="cell">
-        <svg width="45" height="31" viewBox="0 0 220 150" role="img" aria-label="3A at corner size">
-          <g stroke="#c9a227" stroke-width="3.8" stroke-linecap="round">
-            <line x1="52" y1="126" x2="52" y2="78"/><line x1="52" y1="126" x2="52" y2="78" transform="rotate(40 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="78" transform="rotate(-40 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="96" transform="rotate(100 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="96" transform="rotate(-100 52 126)"/>
-          </g>
-          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#c9a227">R</text>
-          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
-        </svg>
-        <span class="cap">corner / 45px</span>
-      </div></div>
-
       <div class="ondark"><div class="cell">
-        <svg width="45" height="31" viewBox="0 0 220 150" role="img" aria-label="3A on purple">
-          <g stroke="#ebd79a" stroke-width="3.8" stroke-linecap="round">
-            <line x1="52" y1="126" x2="52" y2="78"/><line x1="52" y1="126" x2="52" y2="78" transform="rotate(40 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="78" transform="rotate(-40 52 126)"/>
+        <svg width="480" height="360" viewBox="0 0 480 360" role="img" aria-label="Rise and Balance mark, mountains inside the B">
+          <defs>
+            <linearGradient id="g4" x1="0.15" y1="0" x2="0.5" y2="1">
+              <stop offset="0%" stop-color="#fdf2c8"/><stop offset="30%" stop-color="#f0d488"/>
+              <stop offset="62%" stop-color="#d8ab3c"/><stop offset="100%" stop-color="#a07a12"/>
+            </linearGradient>
+            <linearGradient id="p4" x1="0.2" y1="0" x2="0.6" y2="1">
+              <stop offset="0%" stop-color="#8a63cc"/><stop offset="55%" stop-color="#6a44ad"/><stop offset="100%" stop-color="#452a78"/>
+            </linearGradient>
+            <radialGradient id="glow4">
+              <stop offset="0%" stop-color="#fff0be" stop-opacity=".95"/>
+              <stop offset="38%" stop-color="#f2b96f" stop-opacity=".55"/>
+              <stop offset="100%" stop-color="#f2b96f" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="fade4" gradientUnits="userSpaceOnUse" cx="158" cy="222" r="310">
+              <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+              <stop offset="55%" stop-color="#fff" stop-opacity=".92"/>
+              <stop offset="82%" stop-color="#fff" stop-opacity=".55"/>
+              <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+            </radialGradient>
+            <mask id="raymask4"><rect x="0" y="0" width="480" height="360" fill="url(#fade4)"/></mask>
+            <clipPath id="holes4"><rect x="213" y="178" width="62" height="62"/></clipPath>
+            <line id="rayA" x1="0" y1="0" x2="0" y2="-192" stroke="#f2cd74" stroke-width="5" stroke-linecap="round"/>
+            <line id="rayB" x1="0" y1="0" x2="0" y2="-134" stroke="#e7b74e" stroke-width="3" stroke-linecap="round"/>
+          </defs>
+
+          <rect width="480" height="360" fill="#130d2f"/>
+          <ellipse cx="158" cy="222" rx="200" ry="180" fill="url(#glow4)"/>
+
+          <g transform="translate(158,222)" mask="url(#raymask4)" opacity=".92">
+            <use href="#rayA"/><use href="#rayB" transform="rotate(15)"/><use href="#rayA" transform="rotate(30)"/>
+            <use href="#rayB" transform="rotate(45)"/><use href="#rayA" transform="rotate(60)"/><use href="#rayB" transform="rotate(75)"/>
+            <use href="#rayA" transform="rotate(90)"/><use href="#rayB" transform="rotate(105)"/><use href="#rayA" transform="rotate(120)"/>
+            <use href="#rayB" transform="rotate(135)"/><use href="#rayA" transform="rotate(150)"/><use href="#rayB" transform="rotate(165)"/>
+            <use href="#rayA" transform="rotate(180)"/><use href="#rayB" transform="rotate(195)"/><use href="#rayA" transform="rotate(210)"/>
+            <use href="#rayB" transform="rotate(225)"/><use href="#rayA" transform="rotate(240)"/><use href="#rayB" transform="rotate(255)"/>
+            <use href="#rayA" transform="rotate(270)"/><use href="#rayB" transform="rotate(285)"/><use href="#rayA" transform="rotate(300)"/>
+            <use href="#rayB" transform="rotate(315)"/><use href="#rayA" transform="rotate(330)"/><use href="#rayB" transform="rotate(345)"/>
           </g>
-          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#ebd79a">R</text>
-          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#b79bd1">B</text>
+
+          <text x="52" y="232" font-family="EB Garamond, Georgia, serif" font-size="200" font-weight="600" fill="url(#g4)">R</text>
+
+          <text x="188" y="255" font-family="EB Garamond, Georgia, serif" font-size="200" font-weight="600" fill="url(#p4)" stroke="#c9a227" stroke-width="2.6">B</text>
+          <g clip-path="url(#holes4)">
+            <path d="M212,242 L228,199 L242,218 L258,190 L274,224 L286,208 L286,242 Z" fill="#4b3f75"/>
+            <path d="M228,199 L235,212 L231,214 L222,210 Z" fill="#e9e6f2"/>
+            <path d="M258,190 L265,204 L261,206 L252,202 Z" fill="#e9e6f2"/>
+          </g>
+
+          <text x="52" y="322" font-family="EB Garamond, Georgia, serif" font-size="42" font-weight="600" letter-spacing="5" fill="#d3a24e">RISE &amp; BALANCE</text>
         </svg>
-        <span class="cap">on purple</span>
+        <span class="cap">4A &mdash; inside only</span>
       </div></div>
     </div>
   </section>
 
   <section>
-    <h3>3B &mdash; a ridge in both holes</h3>
-    <p class="sub">A soft lavender ridge in the upper hole and the gold ridge in the lower one, so the whole letter holds a landscape. Lovelier at large size, busier at small.</p>
+    <h3>4B &mdash; the range runs through and out the right side</h3>
+    <p class="sub">What your reference actually shows. The mountains pass behind the B and continue right, with a fade so they do not end in a hard edge. More like a scene, less like a letter.</p>
     <div class="sizes">
-      <div class="onlight"><div class="cell">
-        <svg width="220" height="150" viewBox="0 0 220 150" role="img" aria-label="Ridges in both holes of the B">
+      <div class="ondark"><div class="cell">
+        <svg width="480" height="360" viewBox="0 0 480 360" role="img" aria-label="Rise and Balance mark, range extending right">
           <defs>
-            <clipPath id="k3b"><rect x="125" y="79" width="42" height="54"/></clipPath>
-            <linearGradient id="g3b" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#f3e0a4"/><stop offset="45%" stop-color="#e0c268"/><stop offset="100%" stop-color="#b08c17"/>
+            <linearGradient id="g4b" x1="0.15" y1="0" x2="0.5" y2="1">
+              <stop offset="0%" stop-color="#fdf2c8"/><stop offset="30%" stop-color="#f0d488"/>
+              <stop offset="62%" stop-color="#d8ab3c"/><stop offset="100%" stop-color="#a07a12"/>
+            </linearGradient>
+            <linearGradient id="p4b" x1="0.2" y1="0" x2="0.6" y2="1">
+              <stop offset="0%" stop-color="#8a63cc"/><stop offset="55%" stop-color="#6a44ad"/><stop offset="100%" stop-color="#452a78"/>
+            </linearGradient>
+            <radialGradient id="glow4b">
+              <stop offset="0%" stop-color="#fff0be" stop-opacity=".95"/>
+              <stop offset="38%" stop-color="#f2b96f" stop-opacity=".55"/>
+              <stop offset="100%" stop-color="#f2b96f" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="fade4b" gradientUnits="userSpaceOnUse" cx="158" cy="222" r="310">
+              <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+              <stop offset="55%" stop-color="#fff" stop-opacity=".92"/>
+              <stop offset="82%" stop-color="#fff" stop-opacity=".55"/>
+              <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+            </radialGradient>
+            <mask id="raymask4b"><rect x="0" y="0" width="480" height="360" fill="url(#fade4b)"/></mask>
+            <linearGradient id="horizon" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#4b3f75" stop-opacity="0"/>
+              <stop offset="28%" stop-color="#4b3f75" stop-opacity="1"/>
+              <stop offset="72%" stop-color="#4b3f75" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#4b3f75" stop-opacity="0"/>
             </linearGradient>
           </defs>
-          <g stroke="#c9a227" stroke-width="2.4" stroke-linecap="round">
-            <line x1="52" y1="126" x2="52" y2="78"/><line x1="52" y1="126" x2="52" y2="78" transform="rotate(34 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="78" transform="rotate(-34 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="84" transform="rotate(66 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="84" transform="rotate(-66 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="94" transform="rotate(98 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="94" transform="rotate(-98 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="104" transform="rotate(130 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="104" transform="rotate(-130 52 126)"/>
+
+          <rect width="480" height="360" fill="#130d2f"/>
+          <ellipse cx="158" cy="222" rx="200" ry="180" fill="url(#glow4b)"/>
+
+          <g transform="translate(158,222)" mask="url(#raymask4b)" opacity=".92">
+            <use href="#rayA"/><use href="#rayB" transform="rotate(15)"/><use href="#rayA" transform="rotate(30)"/>
+            <use href="#rayB" transform="rotate(45)"/><use href="#rayA" transform="rotate(60)"/><use href="#rayB" transform="rotate(75)"/>
+            <use href="#rayA" transform="rotate(90)"/><use href="#rayB" transform="rotate(105)"/><use href="#rayA" transform="rotate(120)"/>
+            <use href="#rayB" transform="rotate(135)"/><use href="#rayA" transform="rotate(150)"/><use href="#rayB" transform="rotate(165)"/>
+            <use href="#rayA" transform="rotate(180)"/><use href="#rayB" transform="rotate(195)"/><use href="#rayA" transform="rotate(210)"/>
+            <use href="#rayB" transform="rotate(225)"/><use href="#rayA" transform="rotate(240)"/><use href="#rayB" transform="rotate(255)"/>
+            <use href="#rayA" transform="rotate(270)"/><use href="#rayB" transform="rotate(285)"/><use href="#rayA" transform="rotate(300)"/>
+            <use href="#rayB" transform="rotate(315)"/><use href="#rayA" transform="rotate(330)"/><use href="#rayB" transform="rotate(345)"/>
           </g>
-          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="url(#g3b)">R</text>
-          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
-          <g clip-path="url(#k3b)">
-            <path d="M125,106 L133,88 L141,99 L150,83 L159,97 L166,88 L166,106 Z" fill="#b79bd1"/>
-            <path d="M125,133 L134,111 L143,123 L152,99 L162,128 L166,118 L166,133 Z" fill="#c9a227"/>
+
+          <text x="52" y="232" font-family="EB Garamond, Georgia, serif" font-size="200" font-weight="600" fill="url(#g4b)">R</text>
+
+          <g>
+            <path d="M206,246 L226,203 L240,222 L256,194 L274,228 L300,196 L330,232 L360,206 L392,240 L420,220 L440,246 Z" fill="url(#horizon)"/>
+            <path d="M226,203 L233,216 L229,218 L220,214 Z" fill="#e9e6f2" opacity=".92"/>
+            <path d="M256,194 L263,208 L259,210 L250,206 Z" fill="#e9e6f2" opacity=".92"/>
+            <path d="M300,196 L307,210 L303,212 L294,208 Z" fill="#e9e6f2" opacity=".8"/>
           </g>
-          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="none" stroke="#4e2a84" stroke-width="2">B</text>
+
+          <text x="188" y="255" font-family="EB Garamond, Georgia, serif" font-size="200" font-weight="600" fill="url(#p4b)" stroke="#c9a227" stroke-width="2.6">B</text>
+
+          <text x="52" y="322" font-family="EB Garamond, Georgia, serif" font-size="42" font-weight="600" letter-spacing="5" fill="#d3a24e">RISE &amp; BALANCE</text>
         </svg>
-        <span class="cap">large</span>
-      </div></div>
-      <div class="onlight"><div class="cell">
-        <svg width="45" height="31" viewBox="0 0 220 150" role="img" aria-label="3B at corner size">
-          <g stroke="#c9a227" stroke-width="3.8" stroke-linecap="round">
-            <line x1="52" y1="126" x2="52" y2="78"/><line x1="52" y1="126" x2="52" y2="78" transform="rotate(40 52 126)"/>
-            <line x1="52" y1="126" x2="52" y2="78" transform="rotate(-40 52 126)"/>
-          </g>
-          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#c9a227">R</text>
-          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
-        </svg>
-        <span class="cap">corner / 45px</span>
+        <span class="cap">4B &mdash; runs through</span>
       </div></div>
     </div>
   </section>
 
   <section>
-    <h3>3C &mdash; sun from the convergence point instead</h3>
-    <p class="sub">The other option you named: instead of the foot, the light comes from where the strokes of the R meet, in the middle of the letter. Same B as 3A.</p>
+    <h3>4C &mdash; the corners, and the wordmark</h3>
+    <p class="sub">How the mark sits at nav size on the dark ground and on cream, plus the wordmark on its own. The ridges vanish at this size, which is expected.</p>
     <div class="sizes">
-      <div class="onlight"><div class="cell">
-        <svg width="220" height="150" viewBox="0 0 220 150" role="img" aria-label="Sun from the convergence point of the R">
-          <defs>
-            <clipPath id="k3c"><rect x="125" y="105" width="42" height="28"/></clipPath>
-            <linearGradient id="g3c" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#f3e0a4"/><stop offset="45%" stop-color="#e0c268"/><stop offset="100%" stop-color="#b08c17"/>
-            </linearGradient>
-          </defs>
-          <g stroke="#c9a227" stroke-width="2.4" stroke-linecap="round">
-            <line x1="56" y1="99" x2="56" y2="146"/>
-            <line x1="56" y1="99" x2="56" y2="146" transform="rotate(34 56 99)"/>
-            <line x1="56" y1="99" x2="56" y2="146" transform="rotate(-34 56 99)"/>
-            <line x1="56" y1="99" x2="56" y2="140" transform="rotate(66 56 99)"/>
-            <line x1="56" y1="99" x2="56" y2="140" transform="rotate(-66 56 99)"/>
-            <line x1="56" y1="99" x2="56" y2="124" transform="rotate(96 56 99)"/>
-            <line x1="56" y1="99" x2="56" y2="124" transform="rotate(-96 56 99)"/>
-            <line x1="56" y1="99" x2="56" y2="108" transform="rotate(126 56 99)"/>
-            <line x1="56" y1="99" x2="56" y2="108" transform="rotate(-126 56 99)"/>
+      <div class="ondark"><div class="cell">
+        <svg width="62" height="47" viewBox="0 0 480 360" role="img" aria-label="mark corner on dark">
+          <rect width="480" height="360" fill="#130d2f"/>
+          <ellipse cx="158" cy="222" rx="200" ry="180" fill="#3d2c63" opacity=".6"/>
+          <g transform="translate(158,222)" opacity=".9">
+            <use href="#rayA"/><use href="#rayB" transform="rotate(30)"/><use href="#rayA" transform="rotate(60)"/>
+            <use href="#rayB" transform="rotate(90)"/><use href="#rayA" transform="rotate(120)"/><use href="#rayB" transform="rotate(150)"/>
+            <use href="#rayA" transform="rotate(180)"/><use href="#rayB" transform="rotate(210)"/><use href="#rayA" transform="rotate(240)"/>
+            <use href="#rayB" transform="rotate(270)"/><use href="#rayA" transform="rotate(300)"/><use href="#rayB" transform="rotate(330)"/>
           </g>
-          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="url(#g3c)">R</text>
-          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
-          <g clip-path="url(#k3c)">
-            <path d="M125,133 L134,111 L143,123 L152,99 L162,128 L166,118 L166,133 Z" fill="#c9a227"/>
-          </g>
-          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="none" stroke="#4e2a84" stroke-width="2">B</text>
+          <text x="52" y="232" font-family="EB Garamond, Georgia, serif" font-size="200" font-weight="600" fill="#efd282">R</text>
+          <text x="188" y="255" font-family="EB Garamond, Georgia, serif" font-size="200" font-weight="600" fill="#704bb2" stroke="#c9a227" stroke-width="3">B</text>
         </svg>
-        <span class="cap">large</span>
+        <span class="cap">corner on dark</span>
+      </div></div>
+
+      <div class="onlight"><div class="cell">
+        <svg width="62" height="47" viewBox="0 0 480 360" role="img" aria-label="mark corner on cream">
+          <rect width="480" height="360" fill="#fbf7f0"/>
+          <text x="52" y="232" font-family="EB Garamond, Georgia, serif" font-size="200" font-weight="600" fill="#c9a227">R</text>
+          <text x="188" y="255" font-family="EB Garamond, Georgia, serif" font-size="200" font-weight="600" fill="#4e2a84">B</text>
+        </svg>
+        <span class="cap">corner on cream</span>
+      </div></div>
+
+      <div class="onlight"><div class="cell">
+        <svg width="330" height="80" viewBox="0 0 330 80" role="img" aria-label="wordmark">
+          <text x="4" y="52" font-family="EB Garamond, Georgia, serif" font-size="42" font-weight="600" letter-spacing="3" fill="#c9a227">RISE</text>
+          <text x="122" y="52" font-family="EB Garamond, Georgia, serif" font-size="38" font-weight="600" fill="#8a63cc">&amp;</text>
+          <text x="152" y="52" font-family="EB Garamond, Georgia, serif" font-size="42" font-weight="600" letter-spacing="3" fill="#4e2a84">BALANCE</text>
+        </svg>
+        <span class="cap">wordmark</span>
       </div></div>
     </div>
   </section>
@@ -202,13 +236,23 @@
   <!-- ======================= OLDER ROUNDS ======================= -->
   <div class="roundband">
     <h2>Earlier rounds &mdash; kept for comparison</h2>
-    <p>Round 2 and round 1, so Sandra can see the progression.</p>
+    <p>Round 3, round 2 and round 1.</p>
   </div>
 
   <section>
-    <h3>Round 2 and round 1</h3>
-    <p class="sub">Left: round 2, sun at the centre and the mountains filling the B. Middle: round 1, sun at the top. Right: the ampersand as a sun, still the mark that reads hardest at tiny sizes.</p>
     <div class="old">
+      <div class="onlight"><div class="cell">
+        <svg width="120" height="90" viewBox="0 0 220 150" role="img" aria-label="Round 3">
+          <g stroke="#c9a227" stroke-width="2.4" stroke-linecap="round">
+            <line x1="52" y1="126" x2="52" y2="78"/><line x1="52" y1="126" x2="52" y2="78" transform="rotate(40 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="78" transform="rotate(-40 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="96" transform="rotate(100 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="96" transform="rotate(-100 52 126)"/>
+          </g>
+          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#c9a227">R</text>
+          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
+        </svg><span class="cap">round 3</span>
+      </div></div>
       <div class="onlight"><div class="cell">
         <svg width="120" height="90" viewBox="0 0 220 150" role="img" aria-label="Round 2">
           <g stroke="#c9a227" stroke-width="2.4" stroke-linecap="round" transform="translate(58,84)">
@@ -225,29 +269,15 @@
             <line x1="0" y1="0" x2="0" y2="-30"/><line x1="0" y1="0" x2="0" y2="-30" transform="rotate(24)"/>
             <line x1="0" y1="0" x2="0" y2="-30" transform="rotate(-24)"/>
           </g>
-          <path d="M108,132 L128,102 L146,118 L166,88 L188,120 L206,106 L206,140 L108,140 Z" fill="#4e2a84" opacity=".28"/>
           <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#c9a227">R</text>
           <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
         </svg><span class="cap">round 1</span>
-      </div></div>
-      <div class="onlight"><div class="cell">
-        <svg width="140" height="72" viewBox="0 0 230 116" role="img" aria-label="Ampersand sun">
-          <text x="14" y="92" font-family="EB Garamond, Georgia, serif" font-size="86" font-weight="600" fill="#c9a227">R</text>
-          <g stroke="#c9a227" stroke-width="2.4" stroke-linecap="round" transform="translate(100,60)">
-            <circle cx="0" cy="0" r="7" fill="#c9a227" stroke="none"/>
-            <line x1="0" y1="0" x2="0" y2="-24"/><line x1="0" y1="0" x2="0" y2="-24" transform="rotate(45)"/>
-            <line x1="0" y1="0" x2="0" y2="-24" transform="rotate(90)"/><line x1="0" y1="0" x2="0" y2="-24" transform="rotate(135)"/>
-            <line x1="0" y1="0" x2="0" y2="-24" transform="rotate(180)"/><line x1="0" y1="0" x2="0" y2="-24" transform="rotate(225)"/>
-            <line x1="0" y1="0" x2="0" y2="-24" transform="rotate(270)"/><line x1="0" y1="0" x2="0" y2="-24" transform="rotate(315)"/>
-          </g>
-          <text x="130" y="92" font-family="EB Garamond, Georgia, serif" font-size="86" font-weight="600" fill="#4e2a84">B</text>
-        </svg><span class="cap">ampersand sun</span>
       </div></div>
     </div>
   </section>
 
   <footer>
-    <p><b>How to read it.</b> Judge each one at the corner size first. The ridges in the B are a large-size idea; at 45px the B should just be a plain solid B. So the likely answer is two marks: the full one for the hero and print, a plain one for the corner.</p>
+    <p><b>One naming question this raises.</b> The reference writes the name as <b>RISE &amp; BALANCE</b>. The legal entity and the signed-off copy both say <b>Rise and Balance</b>. An ampersand in a logo is a design device, not a name change, and I would keep it out of indexable text and out of the schema. But it is a deliberate choice rather than an accident, and it is yours and Sandra's.</p>
     <p>Concept directions only. Not a finished logo. Not deployed. Rise and Balance LLC, 2026-10-07.</p>
   </footer>
 
