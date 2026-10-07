@@ -37,17 +37,20 @@
   html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
   body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.6;}
 
-  /* ---------- nav: deep purple band, gold script, from the card ---------- */
+  /* ---------- nav: the logo's own ground, so the mark has nothing to sit on ---------- */
   nav{
-    background:linear-gradient(115deg,#241436 0%,#3d2065 45%,#5b2f96 100%);
-    border-bottom:2px solid var(--gold);
+    background:#130d2f;
+    border-bottom:0;
   }
   nav .navin{
     max-width:1080px;margin:0 auto;padding:17px 24px;
     display:flex;align-items:center;justify-content:space-between;gap:16px;
   }
   .brand{display:flex;align-items:center;gap:13px;text-decoration:none;}
-  .brand .lotus{width:36px;height:23px;flex:0 0 auto;}
+  .brand .logomark{height:60px;width:auto;flex:0 0 auto;display:block;}
+  /* The full lockup sits on the image's own ground so the glow meets nothing. */
+  .brandband{background:#130d2f;padding:36px 0 30px;text-align:center;}
+  .brandband img{width:min(420px,74vw);height:auto;display:inline-block;}
   .brand .word{font-family:var(--script);font-size:30px;line-height:1.15;color:#f0e0ac;}
   @supports (-webkit-background-clip:text) or (background-clip:text){
     .brand .word{
@@ -296,12 +299,7 @@
 <nav>
   <div class="navin">
     <a class="brand" href="./">
-      <svg class="lotus" viewBox="0 0 40 26" aria-hidden="true">
-        <path d="M20 0c3.6 4.6 5.4 9 5.4 13.2 0 3.3-1.8 5.9-5.4 7.8-3.6-1.9-5.4-4.5-5.4-7.8C14.6 9 16.4 4.6 20 0z" fill="#f2e2ae"/>
-        <path d="M6.5 6.2c4.6.8 8.2 2.9 10.6 6.3 1.3 1.9 1.6 4.2.9 6.8-4.6-.8-8.2-2.9-10.6-6.3-1.3-1.9-1.6-4.2-.9-6.8z" fill="#c9a227"/>
-        <path d="M33.5 6.2c.7 2.6.4 4.9-.9 6.8-2.4 3.4-6 5.5-10.6 6.3-.7-2.6-.4-4.9.9-6.8 2.4-3.4 6-5.5 10.6-6.3z" fill="#c9a227"/>
-        <circle cx="20" cy="4.6" r="2" fill="#fdf4cd"/>
-      </svg>
+      <img class="logomark" src="logo-mark.png" alt="" width="94" height="60">
       <span class="word">Rise and Balance</span>
     </a>
     <a class="btn" href="#book">Book the conversation</a>
@@ -352,6 +350,11 @@
     <p class="underbtn">Bring one question with you: where does your business stop when you do?</p>
   </div>
 </header>
+
+<!-- The full logo lockup, on its own ground. -->
+<div class="brandband">
+  <img src="logo-lockup.png" alt="Rise and Balance" width="420" height="235">
+</div>
 
 <section>
   <div class="wrap">
