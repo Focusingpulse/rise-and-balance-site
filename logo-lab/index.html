@@ -29,12 +29,13 @@
   section{padding:26px 0;border-bottom:1px solid var(--line);}
   h3{font-size:20px;margin:0 0 4px;}
   .sub{color:#6e6379;font-size:15px;margin:0 0 18px;}
-  .sizes{display:flex;align-items:flex-end;gap:40px;flex-wrap:wrap;}
+  .sizes{display:flex;align-items:flex-end;gap:36px;flex-wrap:wrap;}
   .cell{display:flex;flex-direction:column;align-items:center;gap:10px;}
   .cap{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8a7f95;}
-  .onlight{background:#fff;border:1px solid var(--line);padding:16px 20px;}
-  .ondark{background:var(--purple-deep);padding:16px 20px;}
+  .onlight{background:#fff;border:1px solid var(--line);padding:14px 18px;}
+  .ondark{background:var(--purple-deep);padding:14px 18px;}
   .ondark .cap{color:#9c8bb5;}
+  .old{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-end;}
   footer{padding:30px 0 60px;color:#6e6379;font-size:14px;}
 </style>
 </head>
@@ -49,156 +50,65 @@
 
 <div class="wrap">
 
-  <p class="note"><b>Round 2 is your adjustments.</b> Sun now comes out of the centre or the bottom of the R, and the mountains sit inside the B as its own background. Round 1 is kept underneath for comparison. Still concepts, still not deployed.</p>
+  <p class="note"><b>Round 3 is this round of adjustments.</b> The sun now comes out of the <b>foot</b> of the R and the light spreads from there. The mountains sit <b>inside the B</b>, in its own holes, and stay there. Every mark was rendered and looked at before it went on this page, so what you see here is what is actually there.</p>
 
-  <!-- ==================================================================== -->
-  <!-- ROUND 2                                                              -->
-  <!-- ==================================================================== -->
-
+  <!-- ======================= ROUND 3 ======================= -->
   <div class="roundband">
-    <h2>Round 2 &mdash; your adjustments</h2>
-    <p>Sun out of the R's centre or base. Mountains living inside the B.</p>
+    <h2>Round 3 &mdash; sun at the foot of the R, mountains in the B's holes</h2>
+    <p>The two changes you asked for, plus a variant of each.</p>
   </div>
 
-  <!-- 2A -->
   <section>
-    <h3>2A &mdash; sun at the centre of the R, mountains inside the B</h3>
-    <p class="sub">The rays fan out from the middle of the R and escape around its edges, so the light reads as coming from inside the letter. The B is a window onto the ridge: the mountains are its own background, not a layer behind it.</p>
+    <h3>3A &mdash; sun at the foot, one ridge in the lower hole</h3>
+    <p class="sub">The light spreads from the base of the R, so the letter is standing on a sunrise rather than wearing one. The B carries a single gold ridge in its lower hole, contained by the letter.</p>
     <div class="sizes">
       <div class="onlight"><div class="cell">
-        <svg width="220" height="150" viewBox="0 0 220 150" role="img" aria-label="Sun at centre of R, mountains inside B">
+        <svg width="220" height="150" viewBox="0 0 220 150" role="img" aria-label="Sun at the foot of the R, ridge in the B's lower hole">
           <defs>
-            <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1">
+            <clipPath id="k3a"><rect x="125" y="105" width="42" height="28"/></clipPath>
+            <linearGradient id="g3a" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stop-color="#f3e0a4"/><stop offset="45%" stop-color="#e0c268"/><stop offset="100%" stop-color="#b08c17"/>
             </linearGradient>
-            <clipPath id="clipBA"><text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600">B</text></clipPath>
           </defs>
-          <!-- rays from the centre of the R -->
-          <g stroke="#c9a227" stroke-width="2.6" stroke-linecap="round" opacity=".95" transform="translate(58,84)">
-            <line x1="0" y1="0" x2="0" y2="-44"/>
-            <line x1="0" y1="0" x2="0" y2="-44" transform="rotate(28)"/>
-            <line x1="0" y1="0" x2="0" y2="-44" transform="rotate(-28)"/>
-            <line x1="0" y1="0" x2="0" y2="-36" transform="rotate(58)"/>
-            <line x1="0" y1="0" x2="0" y2="-36" transform="rotate(-58)"/>
-            <line x1="0" y1="0" x2="0" y2="-28" transform="rotate(92)"/>
-            <line x1="0" y1="0" x2="0" y2="-28" transform="rotate(-92)"/>
-            <line x1="0" y1="0" x2="0" y2="-24" transform="rotate(132)"/>
-            <line x1="0" y1="0" x2="0" y2="-24" transform="rotate(-132)"/>
+          <g stroke="#c9a227" stroke-width="2.4" stroke-linecap="round">
+            <line x1="52" y1="126" x2="52" y2="78"/><line x1="52" y1="126" x2="52" y2="78" transform="rotate(34 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="78" transform="rotate(-34 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="84" transform="rotate(66 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="84" transform="rotate(-66 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="94" transform="rotate(98 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="94" transform="rotate(-98 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="104" transform="rotate(130 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="104" transform="rotate(-130 52 126)"/>
           </g>
-          <!-- the B as a window onto the ridge -->
-          <g clip-path="url(#clipBA)">
-            <rect x="100" y="0" width="120" height="150" fill="#fdf9f2"/>
-            <path d="M100,150 L100,104 L122,72 L140,96 L162,58 L186,98 L206,74 L220,104 L220,150 Z" fill="#8d6bb5"/>
-            <path d="M100,150 L100,120 L118,100 L138,124 L158,92 L180,126 L200,104 L220,122 L220,150 Z" fill="#4e2a84"/>
+          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="url(#g3a)">R</text>
+          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
+          <g clip-path="url(#k3a)">
+            <path d="M125,133 L134,111 L143,123 L152,99 L162,128 L166,118 L166,133 Z" fill="#c9a227"/>
           </g>
-          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="none" stroke="#3c2065" stroke-width="2.6">B</text>
-          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="url(#gA)">R</text>
+          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="none" stroke="#4e2a84" stroke-width="2">B</text>
         </svg>
         <span class="cap">large</span>
       </div></div>
 
       <div class="onlight"><div class="cell">
-        <svg width="45" height="31" viewBox="0 0 220 150" role="img" aria-label="2A at corner size">
-          <g stroke="#c9a227" stroke-width="3.6" stroke-linecap="round" transform="translate(58,84)">
-            <line x1="0" y1="0" x2="0" y2="-44"/>
-            <line x1="0" y1="0" x2="0" y2="-44" transform="rotate(35)"/>
-            <line x1="0" y1="0" x2="0" y2="-44" transform="rotate(-35)"/>
+        <svg width="45" height="31" viewBox="0 0 220 150" role="img" aria-label="3A at corner size">
+          <g stroke="#c9a227" stroke-width="3.8" stroke-linecap="round">
+            <line x1="52" y1="126" x2="52" y2="78"/><line x1="52" y1="126" x2="52" y2="78" transform="rotate(40 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="78" transform="rotate(-40 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="96" transform="rotate(100 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="96" transform="rotate(-100 52 126)"/>
           </g>
           <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#c9a227">R</text>
           <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
         </svg>
         <span class="cap">corner / 45px</span>
-      </div></div>
-    </div>
-  </section>
-
-  <!-- 2B -->
-  <section>
-    <h3>2B &mdash; sun out of the bottom of the R</h3>
-    <p class="sub">The sun sits at the foot of the R and its light fans up and out, so the letter is standing on a sunrise. Same B treatment.</p>
-    <div class="sizes">
-      <div class="onlight"><div class="cell">
-        <svg width="220" height="150" viewBox="0 0 220 150" role="img" aria-label="Sun at the base of R">
-          <defs>
-            <linearGradient id="gB" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#f3e0a4"/><stop offset="45%" stop-color="#e0c268"/><stop offset="100%" stop-color="#b08c17"/>
-            </linearGradient>
-            <clipPath id="clipBB"><text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600">B</text></clipPath>
-          </defs>
-          <g stroke="#c9a227" stroke-width="2.6" stroke-linecap="round" opacity=".95" transform="translate(56,126)">
-            <line x1="0" y1="0" x2="0" y2="-42"/>
-            <line x1="0" y1="0" x2="0" y2="-42" transform="rotate(26)"/>
-            <line x1="0" y1="0" x2="0" y2="-42" transform="rotate(-26)"/>
-            <line x1="0" y1="0" x2="0" y2="-34" transform="rotate(54)"/>
-            <line x1="0" y1="0" x2="0" y2="-34" transform="rotate(-54)"/>
-            <line x1="0" y1="0" x2="0" y2="-26" transform="rotate(86)"/>
-            <line x1="0" y1="0" x2="0" y2="-26" transform="rotate(-86)"/>
-          </g>
-          <g clip-path="url(#clipBB)">
-            <rect x="100" y="0" width="120" height="150" fill="#fdf9f2"/>
-            <path d="M100,150 L100,104 L122,72 L140,96 L162,58 L186,98 L206,74 L220,104 L220,150 Z" fill="#8d6bb5"/>
-            <path d="M100,150 L100,120 L118,100 L138,124 L158,92 L180,126 L200,104 L220,122 L220,150 Z" fill="#4e2a84"/>
-          </g>
-          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="none" stroke="#3c2065" stroke-width="2.6">B</text>
-          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="url(#gB)">R</text>
-        </svg>
-        <span class="cap">large</span>
-      </div></div>
-
-      <div class="onlight"><div class="cell">
-        <svg width="45" height="31" viewBox="0 0 220 150" role="img" aria-label="2B at corner size">
-          <g stroke="#c9a227" stroke-width="3.6" stroke-linecap="round" transform="translate(56,126)">
-            <line x1="0" y1="0" x2="0" y2="-42"/>
-            <line x1="0" y1="0" x2="0" y2="-42" transform="rotate(32)"/>
-            <line x1="0" y1="0" x2="0" y2="-42" transform="rotate(-32)"/>
-          </g>
-          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#c9a227">R</text>
-          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
-        </svg>
-        <span class="cap">corner / 45px</span>
-      </div></div>
-    </div>
-  </section>
-
-  <!-- 2C -->
-  <section>
-    <h3>2C &mdash; quieter: solid B, ridge only in the counters</h3>
-    <p class="sub">The restrained version. The B stays solid and clean, and the mountains appear only inside its two counters, like the letter is holding a view. Most likely to survive at small sizes and on a business card.</p>
-    <div class="sizes">
-      <div class="onlight"><div class="cell">
-        <svg width="220" height="150" viewBox="0 0 220 150" role="img" aria-label="Solid B with ridge in its counters">
-          <defs>
-            <linearGradient id="gC" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#f3e0a4"/><stop offset="45%" stop-color="#e0c268"/><stop offset="100%" stop-color="#b08c17"/>
-            </linearGradient>
-            <clipPath id="clipBC"><text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600">B</text></clipPath>
-          </defs>
-          <g stroke="#c9a227" stroke-width="2.6" stroke-linecap="round" opacity=".95" transform="translate(58,84)">
-            <line x1="0" y1="0" x2="0" y2="-44"/>
-            <line x1="0" y1="0" x2="0" y2="-44" transform="rotate(28)"/>
-            <line x1="0" y1="0" x2="0" y2="-44" transform="rotate(-28)"/>
-            <line x1="0" y1="0" x2="0" y2="-36" transform="rotate(58)"/>
-            <line x1="0" y1="0" x2="0" y2="-36" transform="rotate(-58)"/>
-            <line x1="0" y1="0" x2="0" y2="-28" transform="rotate(92)"/>
-            <line x1="0" y1="0" x2="0" y2="-28" transform="rotate(-92)"/>
-          </g>
-          <g clip-path="url(#clipBC)">
-            <path d="M100,150 L100,86 L124,58 L142,86 L166,54 L188,88 L206,68 L220,96 L220,150 Z" fill="#6b3fa0" opacity=".55"/>
-          </g>
-          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
-          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="none" stroke="#fdf9f2" stroke-width="7" opacity=".9">B</text>
-          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="none" stroke="#4e2a84" stroke-width="2.6">B</text>
-          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="url(#gC)">R</text>
-        </svg>
-        <span class="cap">large</span>
       </div></div>
 
       <div class="ondark"><div class="cell">
-        <svg width="45" height="31" viewBox="0 0 220 150" role="img" aria-label="2C on purple at corner size">
-          <g stroke="#ebd79a" stroke-width="3.6" stroke-linecap="round" transform="translate(58,84)">
-            <line x1="0" y1="0" x2="0" y2="-44"/>
-            <line x1="0" y1="0" x2="0" y2="-44" transform="rotate(35)"/>
-            <line x1="0" y1="0" x2="0" y2="-44" transform="rotate(-35)"/>
+        <svg width="45" height="31" viewBox="0 0 220 150" role="img" aria-label="3A on purple">
+          <g stroke="#ebd79a" stroke-width="3.8" stroke-linecap="round">
+            <line x1="52" y1="126" x2="52" y2="78"/><line x1="52" y1="126" x2="52" y2="78" transform="rotate(40 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="78" transform="rotate(-40 52 126)"/>
           </g>
           <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#ebd79a">R</text>
           <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#b79bd1">B</text>
@@ -208,98 +118,136 @@
     </div>
   </section>
 
-  <!-- ==================================================================== -->
-  <!-- ROUND 1                                                              -->
-  <!-- ==================================================================== -->
-
-  <div class="roundband">
-    <h2>Round 1 &mdash; the first pass, kept for comparison</h2>
-    <p>Sun at the top, ridge sitting behind the B.</p>
-  </div>
-
   <section>
-    <h3>1A &mdash; sun at the top, ridge behind</h3>
-    <p class="sub">This is the one you said was closest. Kept so you can show Sandra the before and after.</p>
+    <h3>3B &mdash; a ridge in both holes</h3>
+    <p class="sub">A soft lavender ridge in the upper hole and the gold ridge in the lower one, so the whole letter holds a landscape. Lovelier at large size, busier at small.</p>
     <div class="sizes">
       <div class="onlight"><div class="cell">
-        <svg width="210" height="150" viewBox="0 0 210 150" role="img" aria-label="Round 1 version A">
+        <svg width="220" height="150" viewBox="0 0 220 150" role="img" aria-label="Ridges in both holes of the B">
           <defs>
-            <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+            <clipPath id="k3b"><rect x="125" y="79" width="42" height="54"/></clipPath>
+            <linearGradient id="g3b" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stop-color="#f3e0a4"/><stop offset="45%" stop-color="#e0c268"/><stop offset="100%" stop-color="#b08c17"/>
             </linearGradient>
           </defs>
-          <g stroke="#c9a227" stroke-width="2.4" stroke-linecap="round" opacity=".9" transform="translate(52,60)">
-            <line x1="0" y1="0" x2="0" y2="-34"/>
-            <line x1="0" y1="0" x2="0" y2="-34" transform="rotate(24)"/>
-            <line x1="0" y1="0" x2="0" y2="-34" transform="rotate(-24)"/>
-            <line x1="0" y1="0" x2="0" y2="-27" transform="rotate(48)"/>
-            <line x1="0" y1="0" x2="0" y2="-27" transform="rotate(-48)"/>
-            <line x1="0" y1="0" x2="0" y2="-21" transform="rotate(70)"/>
-            <line x1="0" y1="0" x2="0" y2="-21" transform="rotate(-70)"/>
+          <g stroke="#c9a227" stroke-width="2.4" stroke-linecap="round">
+            <line x1="52" y1="126" x2="52" y2="78"/><line x1="52" y1="126" x2="52" y2="78" transform="rotate(34 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="78" transform="rotate(-34 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="84" transform="rotate(66 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="84" transform="rotate(-66 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="94" transform="rotate(98 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="94" transform="rotate(-98 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="104" transform="rotate(130 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="104" transform="rotate(-130 52 126)"/>
           </g>
-          <path d="M108,132 L128,102 L146,118 L166,88 L188,120 L206,106 L206,140 L108,140 Z" fill="#4e2a84" opacity=".28"/>
-          <path d="M108,132 L128,102 L146,118 L166,88 L188,120 L206,106" fill="none" stroke="#c9a227" stroke-width="1.6" opacity=".7"/>
-          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="url(#g1)">R</text>
+          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="url(#g3b)">R</text>
           <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
+          <g clip-path="url(#k3b)">
+            <path d="M125,106 L133,88 L141,99 L150,83 L159,97 L166,88 L166,106 Z" fill="#b79bd1"/>
+            <path d="M125,133 L134,111 L143,123 L152,99 L162,128 L166,118 L166,133 Z" fill="#c9a227"/>
+          </g>
+          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="none" stroke="#4e2a84" stroke-width="2">B</text>
         </svg>
         <span class="cap">large</span>
       </div></div>
       <div class="onlight"><div class="cell">
-        <svg width="42" height="30" viewBox="0 0 210 150" role="img" aria-label="Round 1 version A at corner size">
-          <g stroke="#c9a227" stroke-width="3.4" stroke-linecap="round" transform="translate(52,60)">
-            <line x1="0" y1="0" x2="0" y2="-34"/>
-            <line x1="0" y1="0" x2="0" y2="-34" transform="rotate(30)"/>
-            <line x1="0" y1="0" x2="0" y2="-34" transform="rotate(-30)"/>
+        <svg width="45" height="31" viewBox="0 0 220 150" role="img" aria-label="3B at corner size">
+          <g stroke="#c9a227" stroke-width="3.8" stroke-linecap="round">
+            <line x1="52" y1="126" x2="52" y2="78"/><line x1="52" y1="126" x2="52" y2="78" transform="rotate(40 52 126)"/>
+            <line x1="52" y1="126" x2="52" y2="78" transform="rotate(-40 52 126)"/>
           </g>
           <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#c9a227">R</text>
           <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
         </svg>
-        <span class="cap">corner / 42px</span>
+        <span class="cap">corner / 45px</span>
       </div></div>
     </div>
   </section>
 
   <section>
-    <h3>1D &mdash; the ampersand as the sun</h3>
-    <p class="sub">R and B with a small gold sunburst between them. Still the one that reads hardest at small size.</p>
+    <h3>3C &mdash; sun from the convergence point instead</h3>
+    <p class="sub">The other option you named: instead of the foot, the light comes from where the strokes of the R meet, in the middle of the letter. Same B as 3A.</p>
     <div class="sizes">
       <div class="onlight"><div class="cell">
-        <svg width="180" height="90" viewBox="0 0 230 116" role="img" aria-label="R sunburst B">
-          <text x="14" y="92" font-family="EB Garamond, Georgia, serif" font-size="86" font-weight="600" fill="#c9a227">R</text>
-          <g stroke="#c9a227" stroke-width="2.4" stroke-linecap="round" transform="translate(100,60)">
-            <circle cx="0" cy="0" r="7" fill="#c9a227" stroke="none"/>
-            <line x1="0" y1="0" x2="0" y2="-24"/>
-            <line x1="0" y1="0" x2="0" y2="-24" transform="rotate(45)"/>
-            <line x1="0" y1="0" x2="0" y2="-24" transform="rotate(90)"/>
-            <line x1="0" y1="0" x2="0" y2="-24" transform="rotate(135)"/>
-            <line x1="0" y1="0" x2="0" y2="-24" transform="rotate(180)"/>
-            <line x1="0" y1="0" x2="0" y2="-24" transform="rotate(225)"/>
-            <line x1="0" y1="0" x2="0" y2="-24" transform="rotate(270)"/>
-            <line x1="0" y1="0" x2="0" y2="-24" transform="rotate(315)"/>
+        <svg width="220" height="150" viewBox="0 0 220 150" role="img" aria-label="Sun from the convergence point of the R">
+          <defs>
+            <clipPath id="k3c"><rect x="125" y="105" width="42" height="28"/></clipPath>
+            <linearGradient id="g3c" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f3e0a4"/><stop offset="45%" stop-color="#e0c268"/><stop offset="100%" stop-color="#b08c17"/>
+            </linearGradient>
+          </defs>
+          <g stroke="#c9a227" stroke-width="2.4" stroke-linecap="round">
+            <line x1="56" y1="99" x2="56" y2="146"/>
+            <line x1="56" y1="99" x2="56" y2="146" transform="rotate(34 56 99)"/>
+            <line x1="56" y1="99" x2="56" y2="146" transform="rotate(-34 56 99)"/>
+            <line x1="56" y1="99" x2="56" y2="140" transform="rotate(66 56 99)"/>
+            <line x1="56" y1="99" x2="56" y2="140" transform="rotate(-66 56 99)"/>
+            <line x1="56" y1="99" x2="56" y2="124" transform="rotate(96 56 99)"/>
+            <line x1="56" y1="99" x2="56" y2="124" transform="rotate(-96 56 99)"/>
+            <line x1="56" y1="99" x2="56" y2="108" transform="rotate(126 56 99)"/>
+            <line x1="56" y1="99" x2="56" y2="108" transform="rotate(-126 56 99)"/>
           </g>
-          <text x="130" y="92" font-family="EB Garamond, Georgia, serif" font-size="86" font-weight="600" fill="#4e2a84">B</text>
+          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="url(#g3c)">R</text>
+          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
+          <g clip-path="url(#k3c)">
+            <path d="M125,133 L134,111 L143,123 L152,99 L162,128 L166,118 L166,133 Z" fill="#c9a227"/>
+          </g>
+          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="none" stroke="#4e2a84" stroke-width="2">B</text>
         </svg>
         <span class="cap">large</span>
       </div></div>
+    </div>
+  </section>
+
+  <!-- ======================= OLDER ROUNDS ======================= -->
+  <div class="roundband">
+    <h2>Earlier rounds &mdash; kept for comparison</h2>
+    <p>Round 2 and round 1, so Sandra can see the progression.</p>
+  </div>
+
+  <section>
+    <h3>Round 2 and round 1</h3>
+    <p class="sub">Left: round 2, sun at the centre and the mountains filling the B. Middle: round 1, sun at the top. Right: the ampersand as a sun, still the mark that reads hardest at tiny sizes.</p>
+    <div class="old">
       <div class="onlight"><div class="cell">
-        <svg width="40" height="20" viewBox="0 0 230 116" role="img" aria-label="R sunburst B at corner size">
-          <text x="14" y="92" font-family="EB Garamond, Georgia, serif" font-size="96" font-weight="600" fill="#c9a227">R</text>
-          <g stroke="#c9a227" stroke-width="4" stroke-linecap="round" transform="translate(104,60)">
-            <circle cx="0" cy="0" r="10" fill="#c9a227" stroke="none"/>
-            <line x1="0" y1="0" x2="0" y2="-26"/>
-            <line x1="0" y1="0" x2="0" y2="-26" transform="rotate(90)"/>
-            <line x1="0" y1="0" x2="0" y2="-26" transform="rotate(180)"/>
-            <line x1="0" y1="0" x2="0" y2="-26" transform="rotate(270)"/>
+        <svg width="120" height="90" viewBox="0 0 220 150" role="img" aria-label="Round 2">
+          <g stroke="#c9a227" stroke-width="2.4" stroke-linecap="round" transform="translate(58,84)">
+            <line x1="0" y1="0" x2="0" y2="-44"/><line x1="0" y1="0" x2="0" y2="-44" transform="rotate(30)"/>
+            <line x1="0" y1="0" x2="0" y2="-44" transform="rotate(-30)"/>
           </g>
-          <text x="138" y="92" font-family="EB Garamond, Georgia, serif" font-size="96" font-weight="600" fill="#4e2a84">B</text>
-        </svg>
-        <span class="cap">corner / 40px</span>
+          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#c9a227">R</text>
+          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
+        </svg><span class="cap">round 2</span>
+      </div></div>
+      <div class="onlight"><div class="cell">
+        <svg width="120" height="90" viewBox="0 0 220 150" role="img" aria-label="Round 1">
+          <g stroke="#c9a227" stroke-width="2.4" stroke-linecap="round" transform="translate(52,60)">
+            <line x1="0" y1="0" x2="0" y2="-30"/><line x1="0" y1="0" x2="0" y2="-30" transform="rotate(24)"/>
+            <line x1="0" y1="0" x2="0" y2="-30" transform="rotate(-24)"/>
+          </g>
+          <path d="M108,132 L128,102 L146,118 L166,88 L188,120 L206,106 L206,140 L108,140 Z" fill="#4e2a84" opacity=".28"/>
+          <text x="26" y="128" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#c9a227">R</text>
+          <text x="112" y="140" font-family="EB Garamond, Georgia, serif" font-size="104" font-weight="600" fill="#4e2a84">B</text>
+        </svg><span class="cap">round 1</span>
+      </div></div>
+      <div class="onlight"><div class="cell">
+        <svg width="140" height="72" viewBox="0 0 230 116" role="img" aria-label="Ampersand sun">
+          <text x="14" y="92" font-family="EB Garamond, Georgia, serif" font-size="86" font-weight="600" fill="#c9a227">R</text>
+          <g stroke="#c9a227" stroke-width="2.4" stroke-linecap="round" transform="translate(100,60)">
+            <circle cx="0" cy="0" r="7" fill="#c9a227" stroke="none"/>
+            <line x1="0" y1="0" x2="0" y2="-24"/><line x1="0" y1="0" x2="0" y2="-24" transform="rotate(45)"/>
+            <line x1="0" y1="0" x2="0" y2="-24" transform="rotate(90)"/><line x1="0" y1="0" x2="0" y2="-24" transform="rotate(135)"/>
+            <line x1="0" y1="0" x2="0" y2="-24" transform="rotate(180)"/><line x1="0" y1="0" x2="0" y2="-24" transform="rotate(225)"/>
+            <line x1="0" y1="0" x2="0" y2="-24" transform="rotate(270)"/><line x1="0" y1="0" x2="0" y2="-24" transform="rotate(315)"/>
+          </g>
+          <text x="130" y="92" font-family="EB Garamond, Georgia, serif" font-size="86" font-weight="600" fill="#4e2a84">B</text>
+        </svg><span class="cap">ampersand sun</span>
       </div></div>
     </div>
   </section>
 
   <footer>
-    <p><b>How to read it.</b> Judge each one at the corner size first. If it does not hold at 45px it only ever works in the hero. Pick a direction and we redraw it properly as vector artwork.</p>
+    <p><b>How to read it.</b> Judge each one at the corner size first. The ridges in the B are a large-size idea; at 45px the B should just be a plain solid B. So the likely answer is two marks: the full one for the hero and print, a plain one for the corner.</p>
     <p>Concept directions only. Not a finished logo. Not deployed. Rise and Balance LLC, 2026-10-07.</p>
   </footer>
 
