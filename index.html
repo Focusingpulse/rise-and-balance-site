@@ -609,11 +609,12 @@
 
     <!--
       A REAL FORM, so that a person and an AI agent can both complete it.
-      ⚠ THE ACTION IS A PLACEHOLDER. Replace REPLACE_WITH_YOUR_FORM_ID with the
-      endpoint from a form service before this site goes live, or the form will
-      post nowhere. Formspree's free tier is the recommendation.
+      Posts to FormSubmit, which needs no account and no monthly fee.
+      ⚠ ONE-TIME STEP: FormSubmit emails Riseandbalance101@gmail.com the first time
+      this form is submitted. Click the confirmation link in that email once, or
+      nothing after it will be delivered. That is the whole setup.
     -->
-    <form class="bookform" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
+    <form class="bookform" action="https://formsubmit.co/Riseandbalance101@gmail.com" method="POST">
       <div class="fld">
         <label for="f-name">Your name</label>
         <input id="f-name" name="name" type="text" autocomplete="name" required>
@@ -629,7 +630,7 @@
       <!-- Honeypot. Hidden from people and from assistive technology; a bot will fill it. -->
       <div class="hp" aria-hidden="true">
         <label for="f-gotcha">Leave this empty</label>
-        <input id="f-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+        <input id="f-gotcha" name="_honey" type="text" tabindex="-1" autocomplete="off">
       </div>
       <input type="hidden" name="_subject" value="Rise and Balance: new booking request">
       <button class="btn" type="submit">Book the conversation</button>
