@@ -25,13 +25,13 @@
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
   :root{
-    --purple-deep:#2e1a4a;
-    --purple:#4e2a84;
-    --purple-bright:#6b3fa0;
+    --purple-deep:#4c0686;
+    --purple:#50058d;
+    --purple-bright:#6a22a4;
     --purple-soft:#b79bd1;
     --gold:#c9a227;
     --gold-light:#ebd79a;
-    --gold-deep:#9c7a14;
+    --gold-deep:#a8801a;
     --cream:#fbf7f0;
     --cream-2:#f4ede2;
     --ink:#241a33;
@@ -46,7 +46,7 @@
 
   /* ---------- nav: the logo's own ground, so the mark has nothing to sit on ---------- */
   nav{
-    background:#130d2f;
+    background:#4c0686;
     border-bottom:0;
   }
   nav .navin{
@@ -56,8 +56,8 @@
   .brand{display:flex;align-items:center;gap:13px;text-decoration:none;}
   .brand .logomark{height:60px;width:auto;flex:0 0 auto;display:block;}
   /* The full lockup sits on the image's own ground so the glow meets nothing. */
-  .brandband{background:#130d2f;padding:36px 0 30px;text-align:center;}
-  .brandband img{width:min(420px,74vw);height:auto;display:inline-block;}
+  .brandband{background:#4c0686;padding:36px 0 30px;text-align:center;}
+  .brandband img{width:min(460px,78vw);height:auto;display:inline-block;}
   .brand .word{font-family:var(--script);font-size:30px;line-height:1.15;color:#f0e0ac;}
   @supports (-webkit-background-clip:text) or (background-clip:text){
     .brand .word{
@@ -212,7 +212,7 @@
   .tagline .sep{color:var(--gold);font-size:.7em;vertical-align:middle;padding:0 6px;}
 
   /* ---------- CTA ---------- */
-  .cta-band{background:var(--purple);color:#fff;padding:64px 0;}
+  .cta-band{background:linear-gradient(180deg,#6a22a4 0%,#50058d 100%);color:#fff;padding:64px 0;}
   .cta-band h2{color:#fff;}
   .cta-band .eyebrow{color:var(--gold-light);}
   .cta-band .rule{background:var(--gold-light);}
@@ -285,6 +285,7 @@
     section{padding:40px 0;}
     nav .navin{padding:14px 18px;flex-wrap:wrap;}
     .brand .word{font-size:25px;}
+    .brand .logomark{height:46px;width:auto;}
     /* Thumb zone: primary buttons sit on the RIGHT on a phone so a right
        thumb reaches them without crossing the screen. Set on the button
        itself, never on the container, so body copy stays left-aligned. */
@@ -403,7 +404,7 @@
 <nav>
   <div class="navin">
     <a class="brand" href="./">
-      <img class="logomark" src="logo-mark.png" alt="" width="94" height="60">
+      <img class="logomark" src="logo-mark.png" alt="" width="105" height="60">
       <span class="word">Rise and Balance</span>
     </a>
     <a class="btn" href="#book">Book the conversation</a>
@@ -469,7 +470,7 @@
 
 <!-- The full logo lockup, on its own ground. -->
 <div class="brandband">
-  <img src="logo-lockup.png" alt="Rise and Balance" width="420" height="235">
+  <img src="logo-lockup.png" alt="Rise and Balance" width="460" height="68">
 </div>
 
 <section>
