@@ -63,8 +63,12 @@ Once DNS resolves:
    ```
    User-agent: *
    Allow: /
+   Disallow: /card/
    Sitemap: https://riseandbalance.net/sitemap.xml
    ```
+   ⚠ **`Disallow: /card/` is not optional.** That path holds the business-card proof
+   page (a client review surface, `noindex` on the page as well). Without the rule it
+   becomes publicly crawlable the moment `Allow: /` goes in. Two belts, not one.
 4. bump `<lastmod>` in `sitemap.xml` to the go-live date
 
 Ask the agent to do this — it is one commit.
