@@ -112,12 +112,23 @@
   });
 
   /* Hero: reveals on load rather than on scroll, since it is already
-     on screen. The pull quote comes out of the background. */
+     on screen. The pull quote comes out of the background.
+     The hero is two columns now (words, then the portrait), so the stagger
+     walks the copy column and then hands off to the portrait. Walking the
+     wrapper's children directly would animate the whole hero as one block. */
   var heroWrap = document.querySelector('.hero .wrap');
   if (heroWrap) {
-    Array.prototype.forEach.call(heroWrap.children, function (el, i) {
-      mark(el, el.classList.contains('line') ? 'rv-bg' : null, i * 120);
-    });
+    var step = 0;
+    var copy = heroWrap.querySelector('.hero-copy');
+    var shot = heroWrap.querySelector('.hero-photo');
+
+    if (copy) {
+      Array.prototype.forEach.call(copy.children, function (el) {
+        mark(el, el.classList.contains('line') ? 'rv-bg' : null, step * 120);
+        step++;
+      });
+    }
+    if (shot) { mark(shot, null, step * 120); }
   }
 
   /* The Balance descent */

@@ -89,7 +89,24 @@
     position:relative;overflow:hidden;padding:48px 0 36px;
     background:linear-gradient(180deg,#e7d6f5 0%,#f7e1d0 32%,#fbeecd 60%,var(--cream) 100%);
   }
-  .hero .wrap{position:relative;z-index:2;}
+  .hero .wrap{position:relative;z-index:2;max-width:1060px;}
+  /* Two columns on a wide screen: the words on the left, Sandra on the right.
+     The portrait sits in an arch, which is the shape the brand already uses
+     (the wave, the sunburst) and it reads as a doorway the sunrise comes through. */
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 344px;gap:56px;align-items:center;}
+  .hero-copy{min-width:0;}
+  .hero-photo{position:relative;}
+  .hero-photo::before{
+    content:"";position:absolute;left:-16%;right:-16%;top:-14%;bottom:-10%;z-index:-1;
+    background:radial-gradient(ellipse at 50% 42%, rgba(255,232,158,.52) 0%, rgba(252,214,124,.20) 46%, transparent 70%);
+  }
+  .hero-photo img{
+    position:relative;z-index:1;
+    display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 34%;
+    border-radius:172px 172px 8px 8px;
+    border:1.5px solid rgba(201,162,39,.8);
+    box-shadow:0 26px 54px rgba(74,37,128,.22), 0 0 0 11px rgba(255,255,255,.34);
+  }
   /* Decoration lives inside a clipping box so an oversized sunburst can never
      contribute to document width. Kept as defensive containment. The overflow
      this was originally blamed for (2026-10-06) turned out to be an artifact of
@@ -97,18 +114,26 @@
      structure is still right, it just was not the bug. */
   /* Centred with margin-left, NOT translateX(-50%), so the transform channel
      stays free for the parallax writer. */
-  .hero-deco{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1;}
+  /* The sunrise now sits behind Sandra rather than behind the headline.
+     It is a zero-size anchor centred on the portrait, so the glow and the
+     rays stay locked to her at every width instead of drifting across the
+     words. The hero clips it, so nothing escapes the section. */
+  .hero-deco{position:absolute;left:50%;top:44%;width:0;height:0;pointer-events:none;z-index:0;}
   .sunburst{
-    --w:760px;
-    position:absolute;left:50%;top:-190px;width:var(--w);height:var(--w);
-    margin-left:calc(var(--w) / -2);border-radius:50%;
+    --w:660px;
+    position:absolute;left:calc(var(--w) / -2);top:calc(var(--w) / -2);
+    width:var(--w);height:var(--w);border-radius:50%;
     background:
-      radial-gradient(circle, rgba(244,209,116,.58) 0%, rgba(243,200,96,.30) 30%, rgba(243,200,96,.11) 48%, transparent 66%);
+      radial-gradient(circle, rgba(244,209,116,.60) 0%, rgba(243,200,96,.30) 30%, rgba(243,200,96,.10) 48%, transparent 66%);
   }
   .rays{
-    --w:820px;
-    position:absolute;left:50%;top:-150px;width:var(--w);height:var(--w);
-    margin-left:calc(var(--w) / -2);opacity:.55;
+    --w:566px;
+    position:absolute;left:calc(var(--w) / -2);top:calc(var(--w) / -2);
+    width:var(--w);height:var(--w);opacity:.40;
+    /* the ray tips fade out rather than stopping at a hard edge, so the
+       light reads as ambient and never draws a line across the words */
+    -webkit-mask-image:radial-gradient(circle,#000 24%,rgba(0,0,0,.30) 60%,transparent 88%);
+            mask-image:radial-gradient(circle,#000 24%,rgba(0,0,0,.30) 60%,transparent 88%);
   }
   .line{
     font-size:clamp(21px,2.9vw,28px);line-height:1.42;
@@ -250,6 +275,12 @@
     .js [data-par]{transform:none !important;}
   }
 
+  @media (max-width:880px){
+    .hero-grid{grid-template-columns:1fr;gap:30px;}
+    .hero-photo{max-width:296px;margin:4px auto 0;}
+    .hero-photo img{border-radius:148px 148px 8px 8px;box-shadow:0 18px 38px rgba(74,37,128,.20), 0 0 0 9px rgba(255,255,255,.34);}
+  }
+
   @media (max-width:620px){
     section{padding:40px 0;}
     nav .navin{padding:14px 18px;flex-wrap:wrap;}
@@ -382,13 +413,23 @@
 <main id="main">
 
 <header class="hero">
-  <div class="hero-deco">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1>You don't own your business. It owns you.</h1>
+        <p class="lead">We find every place your business depends on you personally, and then we remove the ones that never needed to be yours.</p>
+        <p class="line">Balance is not a mindset. It is what is left over once the business stops running on you.</p>
+        <a class="btn" href="#book">Book the conversation</a>
+        <p class="underbtn">Bring one question with you: where does your business stop when you do?</p>
+      </div>
+      <div class="hero-photo">
+        <div class="hero-deco">
     <!-- Reverse parallax: the sun and its light rise as you scroll down.
          A NEGATIVE factor makes an element outrun the scroll, so the sun
          climbs out of frame instead of settling into it. The rays move a
          little slower than the glow, which keeps depth between them. -->
-    <div class="sunburst" data-par="-0.45"></div>
-  <svg class="rays" data-par="-0.34" viewBox="0 0 200 200" aria-hidden="true">
+          <div class="sunburst" data-par="-0.45"></div>
+        <svg class="rays" data-par="-0.34" viewBox="0 0 200 200" aria-hidden="true">
     <g stroke="#c9a227" stroke-width="0.7" stroke-linecap="round">
       <line x1="100" y1="100" x2="100" y2="14"/>
       <line x1="100" y1="100" x2="100" y2="14" transform="rotate(15 100 100)"/>
@@ -416,13 +457,13 @@
       <line x1="100" y1="100" x2="100" y2="14" transform="rotate(345 100 100)"/>
     </g>
   </svg>
-  </div>
-  <div class="wrap">
-    <h1>You don't own your business. It owns you.</h1>
-    <p class="lead">We find every place your business depends on you personally, and then we remove the ones that never needed to be yours.</p>
-    <p class="line">Balance is not a mindset. It is what is left over once the business stops running on you.</p>
-    <a class="btn" href="#book">Book the conversation</a>
-    <p class="underbtn">Bring one question with you: where does your business stop when you do?</p>
+        </div>
+        <picture>
+          <source srcset="sandra-hero.webp" type="image/webp">
+          <img src="sandra-hero.png" alt="Sandra Rose, founder of Rise and Balance" width="608" height="810" fetchpriority="high" decoding="async">
+        </picture>
+      </div>
+    </div>
   </div>
 </header>
 
