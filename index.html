@@ -48,11 +48,11 @@
     background:#4c0686;
     border-bottom:0;
   }
-  nav .navin{
-    max-width:1080px;margin:0 auto;padding:17px 24px;
-    display:flex;align-items:center;justify-content:space-between;gap:16px;
+  nav .navin{
+    max-width:1080px;margin:0 auto;padding:17px 24px;
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;
   }
-  .brand{display:flex;align-items:center;gap:13px;text-decoration:none;}
+  .brand{display:flex;align-items:center;gap:13px;text-decoration:none;min-width:0;}
   .brand .logomark{height:30px;width:auto;flex:0 0 auto;display:block;background:#fbf7f0;border-radius:9px;padding:7px 9px;box-sizing:content-box;}
   /* The full lockup sits on the image's own ground so the glow meets nothing. */
   .brandband{background:#4c0686;padding:36px 0 30px;text-align:center;}
@@ -94,9 +94,9 @@
      (the wave, the sunburst) and it reads as a doorway the sunrise comes through. */
   .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 344px;gap:56px;align-items:center;}
   .hero-copy{min-width:0;}
-  .hero-photo{position:relative;margin-top:76px;}
+  .hero-photo{position:relative;display:flex;flex-direction:column;align-items:center;margin-top:16px;}
   .hero-photo::before{
-    content:"";position:absolute;left:-16%;right:-16%;top:-14%;bottom:-10%;z-index:-1;
+    content:"";position:absolute;left:-9%;right:-9%;top:-14%;bottom:-10%;z-index:-1;
     background:radial-gradient(ellipse at 50% 42%, rgba(255,232,158,.52) 0%, rgba(252,214,124,.20) 46%, transparent 70%);
   }
   .hero-photo img{
@@ -117,23 +117,15 @@
      It is a zero-size anchor centred on the portrait, so the glow and the
      rays stay locked to her at every width instead of drifting across the
      words. The hero clips it, so nothing escapes the section. */
-  .hero-deco{position:absolute;left:50%;top:13%;width:0;height:0;pointer-events:none;z-index:0;}
-  .sunburst{
-    --w:660px;
-    position:absolute;left:calc(var(--w) / -2);top:calc(var(--w) / -2);
-    width:var(--w);height:var(--w);border-radius:50%;
-    background:
-      radial-gradient(circle, rgba(244,209,116,.60) 0%, rgba(243,200,96,.30) 30%, rgba(243,200,96,.10) 48%, transparent 66%);
-  }
-  .rays{
-    --w:566px;
-    position:absolute;left:calc(var(--w) / -2);top:calc(var(--w) / -2);
-    width:var(--w);height:var(--w);opacity:.40;
-    /* the ray tips fade out rather than stopping at a hard edge, so the
-       light reads as ambient and never draws a line across the words */
-    -webkit-mask-image:radial-gradient(circle,#000 24%,rgba(0,0,0,.30) 60%,transparent 88%);
-            mask-image:radial-gradient(circle,#000 24%,rgba(0,0,0,.30) 60%,transparent 88%);
-  }
+  /* The sun gets its own space above the portrait, so both are visible and neither sits on the other. */
+  .hero-deco{position:relative;width:100%;max-width:520px;height:196px;flex:0 0 auto;overflow:hidden;pointer-events:none;z-index:0;}
+  .sunburst{position:absolute;left:50%;bottom:44px;margin-left:-60px;width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle at 50% 42%,#fffdf2 0%,#fdf0c2 26%,#f3dc9c 52%,rgba(228,196,100,.65) 78%,rgba(228,196,100,0) 100%);
+    box-shadow:0 0 58px 14px rgba(244,216,140,.60), 0 0 120px 30px rgba(244,216,140,.28);}
+  .rays{position:absolute;left:50%;bottom:102px;margin-left:-172px;width:344px;height:344px;opacity:.72;
+    -webkit-mask-image:radial-gradient(circle,#000 36%,rgba(0,0,0,.55) 68%,transparent 96%);
+            mask-image:radial-gradient(circle,#000 36%,rgba(0,0,0,.55) 68%,transparent 96%);}
+  .rays g{stroke-width:1.15;}
   .line{
     font-size:clamp(21px,2.9vw,28px);line-height:1.42;
     border-left:3px solid var(--gold);padding-left:20px;margin:30px 0 34px;color:var(--purple);
@@ -276,7 +268,10 @@
 
   @media (max-width:880px){
     .hero-grid{grid-template-columns:1fr;gap:30px;}
-    .hero-photo{max-width:296px;margin:4px auto 0;}
+    .hero-photo{max-width:296px;margin:0 auto;}
+    .hero-deco{height:150px;width:100%;}
+    .sunburst{width:92px;height:92px;margin-left:-46px;bottom:36px;}
+    .rays{width:284px;height:284px;margin-left:-142px;bottom:76px;}
     .hero-photo img{border-radius:148px 148px 8px 8px;box-shadow:0 18px 38px rgba(74,37,128,.20), 0 0 0 9px rgba(255,255,255,.34);}
   }
 
@@ -291,8 +286,6 @@
     .btn{padding:11px 16px;font-size:15px;display:block;width:fit-content;margin-left:auto;margin-right:0;}
     .pillars .row{gap:26px 30px;}
     .ridge svg{height:52px;}
-    .sunburst{--w:520px;top:-140px;}
-    .rays{--w:560px;top:-110px;}
   }
 </style>
 <script type="application/ld+json">
@@ -403,7 +396,7 @@
 <nav>
   <div class="navin">
     <a class="brand" href="./">
-      <img class="logomark" src="logo-mark.png" alt="" width="48" height="30">
+      <img class="logomark" src="logo-lotus.png" alt="" width="48" height="30">
       <span class="word">Rise and Balance</span>
     </a>
     <a class="btn" href="#book">Book the conversation</a>
@@ -428,8 +421,8 @@
          A NEGATIVE factor makes an element outrun the scroll, so the sun
          climbs out of frame instead of settling into it. The rays move a
          little slower than the glow, which keeps depth between them. -->
-          <div class="sunburst" data-par="-0.45"></div>
-        <svg class="rays" data-par="-0.34" viewBox="0 0 200 200" aria-hidden="true">
+          <div class="sunburst"></div>
+        <svg class="rays" viewBox="0 0 200 200" aria-hidden="true">
     <g stroke="#c9a227" stroke-width="0.7" stroke-linecap="round">
       <line x1="100" y1="100" x2="100" y2="14"/>
       <line x1="100" y1="100" x2="100" y2="14" transform="rotate(15 100 100)"/>
