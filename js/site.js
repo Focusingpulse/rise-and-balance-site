@@ -147,4 +147,37 @@
       if (r.top < window.innerHeight && r.bottom > 0) { el.classList.add('in'); }
     });
   }, 4000);
+
+  /* ---------------------------------------------------------------
+     Floating call / text widget.
+     The menu is collapsed by CSS only when html.js is present, so with
+     JavaScript off both links stay visible and reachable. This button
+     toggles; it is never the only route to the phone number.
+  --------------------------------------------------------------- */
+  (function () {
+    var fab = document.getElementById('fab');
+    var fabBtn = document.getElementById('fabbtn');
+    if (!fab || !fabBtn) { return; }
+
+    var setFab = function (open) {
+      fab.classList.toggle('open', open);
+      fabBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+
+    fabBtn.addEventListener('click', function () {
+      setFab(!fab.classList.contains('open'));
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && fab.classList.contains('open')) {
+        setFab(false);
+        fabBtn.focus();
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (fab.classList.contains('open') && !fab.contains(e.target)) { setFab(false); }
+    });
+  })();
+
 })();

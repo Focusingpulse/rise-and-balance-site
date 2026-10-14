@@ -290,6 +290,40 @@
     .pillars .row{gap:26px 30px;}
     .ridge svg{height:52px;}
   }
+
+  /* ---------- floating call / text widget ----------
+     Behaviour mirrors the call/text button already running on BMVC.
+     Three deliberate differences, all of them fixes for defects the
+     iPhone sweep found on the BMVC site (see the Mobile Gate rule):
+       1. Every tap target is 48px minimum. BMVC fails this on 40/40 pages.
+       2. The footer gets extra bottom padding so the fixed button can never
+          permanently cover the last line of the page.
+       3. The collapsed state is scoped to html.js, so with JavaScript off
+          both links stay visible. Nothing is hidden by CSS alone. */
+  .fab{position:fixed;right:20px;bottom:20px;bottom:max(20px, calc(env(safe-area-inset-bottom, 0px) + 12px));z-index:60;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+  .fab-menu{display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+  .fab-item{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 20px;border-radius:999px;background:var(--purple);color:#fff;text-decoration:none;font-size:16px;line-height:1;box-shadow:0 6px 18px rgba(36,26,51,.28);border:1px solid rgba(201,162,39,.6);}
+  .fab-item:hover{background:var(--purple-bright);}
+  .fab-item:focus-visible{outline:2px solid var(--gold);outline-offset:2px;background:var(--purple-bright);}
+  .fab-item svg{flex:0 0 auto;}
+  .fab-trigger{width:60px;height:60px;border-radius:50%;border:2px solid var(--gold);background:var(--purple);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;box-shadow:0 8px 24px rgba(36,26,51,.32);position:relative;}
+  .fab-trigger:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+  .fab-trigger .i-close{display:none;}
+  .fab.open .fab-trigger .i-close{display:block;}
+  .fab.open .fab-trigger .i-phone{display:none;}
+  .fab-trigger::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:2px solid var(--gold);opacity:0;animation:fabpulse 2.6s ease-out infinite;pointer-events:none;}
+  @keyframes fabpulse{0%{transform:scale(1);opacity:.5}70%{transform:scale(1.5);opacity:0}100%{transform:scale(1.5);opacity:0}}
+  .js .fab .fab-menu{display:none;}
+  .js .fab.open .fab-menu{display:flex;}
+  footer{padding-bottom:104px;}
+  @media (max-width:520px){
+    .fab{right:14px;bottom:24px;bottom:max(24px, calc(env(safe-area-inset-bottom, 0px) + 14px));}
+    .fab-item{font-size:15px;padding:11px 17px;}
+    .fab-trigger{width:56px;height:56px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .fab-trigger::after{animation:none;}
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -694,6 +728,21 @@
 </footer>
 
 <script src="js/site.js" defer></script>
+
+
+<!-- floating call / text -->
+<div class="fab" id="fab">
+  <div class="fab-menu" id="fabmenu">
+    <a class="fab-item" href="tel:+17022085454"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call</a>
+    <a class="fab-item" href="sms:+17022085454"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Text</a>
+  </div>
+  <button class="fab-trigger" id="fabbtn" type="button" aria-expanded="false" aria-controls="fabmenu" aria-label="Contact options: call or text">
+    <svg class="i-phone" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <svg class="i-close" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
 
 </body>
 </html>
