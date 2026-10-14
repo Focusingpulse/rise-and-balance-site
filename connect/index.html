@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sandra Rose | Rise and Balance</title>
-<meta name="description" content="Sandra Rose, founder of Rise and Balance. Call, email, visit the site, or save the contact.">
+<meta name="description" content="Sandra Rose, founder of Rise and Balance. Call, email, or visit riseandbalance.net.">
 <link rel="canonical" href="https://riseandbalance.net/connect/">
 <meta property="og:title" content="Sandra Rose | Rise and Balance">
-<meta property="og:description" content="Business systems consulting. Call, email, visit the site, or save the contact.">
+<meta property="og:description" content="Business systems consulting. Call, email, or visit riseandbalance.net.">
 <meta property="og:url" content="https://riseandbalance.net/connect/">
 <meta property="og:image" content="https://riseandbalance.net/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
   :root{
     --purple-deep:#4c0686; --purple:#50058d; --purple-bright:#6a22a4;
@@ -26,41 +26,58 @@
   }
   *{box-sizing:border-box;}
   html{-webkit-text-size-adjust:100%;}
-  body{margin:0;font-family:var(--serif);color:var(--ink);line-height:1.6;
-    background:linear-gradient(180deg,#6a22a4 0%,#5d1598 24%,#560a92 48%,#50058d 74%,#4c0686 100%);
-    background-attachment:fixed;min-height:100vh;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--serif);line-height:1.6;}
 
-  .wrap{max-width:520px;margin:0 auto;padding:0 22px;position:relative;}
+  .wrap{max-width:520px;margin:0 auto;}
 
-  /* the card's own tagline, at the top, exactly as it reads on the front */
-  .tagline{
-    font-family:var(--script);text-align:center;color:#f2dfa9;
-    font-size:clamp(24px,7vw,32px);line-height:1.25;
-    padding:30px 0 4px;margin:0;
+  /* --------- the front of the card: her sky, her arch, her light --------- */
+  .front{
+    position:relative;overflow:hidden;text-align:center;
+    padding:16px 24px 0;
+    /* the card front's own gradient: blue-lavender sky at the top, cream and
+       gold through the middle, warm at the base, fading into the page. */
+    background:linear-gradient(180deg,
+      #cdbde2 0%, #c8c2e6 6%, #c5c1e6 11%, #ddd3e0 17%, #f4dcdd 22%,
+      #fde4d6 32%, #fdefd8 45%, #fbe2ce 58%, #f8d9c6 72%, #f2cbb6 86%, #fbf7f0 100%);
   }
-  .tagline i{font-style:normal;color:#d8b453;font-size:.5em;vertical-align:middle;padding:0 8px;}
+  /* the sunrise, above the arch, so it never crosses her face */
+  .deco{position:relative;width:100%;max-width:360px;height:118px;margin:0 auto;overflow:hidden;pointer-events:none;}
+  .sunburst{position:absolute;left:50%;bottom:34px;margin-left:-40px;width:80px;height:80px;border-radius:50%;
+    background:radial-gradient(circle at 50% 36%,#fffbe8 0%,#f9e8b0 26%,#edd283 52%,#dcb84f 78%,#c9a227 96%,rgba(201,162,39,0) 100%);
+    box-shadow:0 0 30px 7px rgba(238,204,110,.60), 0 0 84px 22px rgba(238,204,110,.25);}
+  .rays{position:absolute;left:50%;bottom:-56px;margin-left:-140px;width:280px;height:280px;opacity:.7;
+    -webkit-mask-image:radial-gradient(circle,#000 30%,rgba(0,0,0,.5) 60%,transparent 88%);
+            mask-image:radial-gradient(circle,#000 30%,rgba(0,0,0,.5) 60%,transparent 88%);}
 
-  .brand{text-align:center;padding:6px 0 30px;position:relative;}
-  .brand .aura{position:absolute;left:50%;top:-30px;width:340px;height:250px;margin-left:-170px;
-    background:radial-gradient(ellipse at 50% 46%,
-      rgba(255,243,214,.42) 0%, rgba(255,236,190,.28) 24%, rgba(254,228,168,.14) 44%,
-      rgba(250,218,148,.05) 60%, transparent 74%);pointer-events:none;}
-  .lotus{width:172px;height:108px;display:block;margin:0 auto;position:relative;}
-  .word{font-family:var(--script);font-size:clamp(40px,11vw,52px);line-height:1;margin:8px 0 0;color:#f6e6b0;}
-  @supports (-webkit-background-clip:text) or (background-clip:text){
-    .word{background:linear-gradient(180deg,#fdf3c4 0%,#ecd486 40%,#cfa63c 72%,#9c7413 100%);
-      -webkit-background-clip:text;background-clip:text;color:transparent;
-      filter:drop-shadow(0 1px 3px rgba(0,0,0,.28));}
+  .photo{position:relative;width:min(276px,72vw);margin:0 auto;}
+  .photo img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 34%;
+    border-radius:140px 140px 8px 8px;border:1.5px solid rgba(201,162,39,.8);
+    box-shadow:0 20px 44px rgba(74,37,128,.20), 0 0 0 9px rgba(255,255,255,.34);}
+
+  .mark{position:relative;z-index:2;margin-top:14px;}
+  .lotus{width:132px;height:83px;display:block;margin:0 auto;}
+  .word{font-family:var(--script);font-size:clamp(38px,10.5vw,50px);line-height:1;margin:4px 0 0;
+    color:#7a5a10;
+    background:linear-gradient(180deg,#b98f1c 0%,#8f6a0c 60%,#6f5107 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .rule{width:132px;height:1.5px;margin:10px auto 10px;background:linear-gradient(90deg,transparent,#a8801a,transparent);}
+  .name{font-size:22px;font-weight:600;letter-spacing:.24em;text-indent:.24em;color:#4b2a72;margin:0;}
+  .title{font-size:11.5px;letter-spacing:.4em;text-indent:.4em;color:#7a5a10;margin:5px 0 0;text-transform:uppercase;font-weight:600;}
+
+  /* --------- the tagline band, exactly as it sits on the card --------- */
+  .band{
+    background:linear-gradient(115deg,#4c0686 0%,#50058d 48%,#6a22a4 100%);
+    text-align:center;padding:14px 16px;margin-top:26px;
   }
-  .rule{width:150px;height:1.5px;margin:12px auto 12px;
-    background:linear-gradient(90deg,transparent,#c9a227,transparent);}
-  .name{font-size:26px;font-weight:600;letter-spacing:.24em;text-indent:.24em;color:#fdf7ea;margin:0;}
-  .title{font-size:12px;letter-spacing:.4em;text-indent:.4em;color:#e5c876;margin:6px 0 0;text-transform:uppercase;font-weight:500;}
+  .band span{font-family:var(--script);color:#f2dfa9;font-size:clamp(16.5px,4.7vw,26px);line-height:1.3;
+    display:inline-block;overflow-wrap:normal;word-break:keep-all;}
+  .band i{font-style:normal;color:#d8b453;font-size:.5em;vertical-align:middle;padding:0 8px;}
 
-  .actions{display:flex;flex-direction:column;gap:12px;}
-  .act{display:flex;align-items:center;gap:15px;background:var(--cream);
-    border:1px solid rgba(201,162,39,.55);border-radius:15px;padding:16px 18px;min-height:64px;
-    text-decoration:none;color:var(--ink);box-shadow:0 10px 26px rgba(0,0,0,.22);}
+  /* --------- the contact, and nothing else --------- */
+  .contact{padding:24px 24px 40px;}
+  .act{display:flex;align-items:center;gap:15px;background:#fff;border:1px solid rgba(201,162,39,.55);
+    border-radius:15px;padding:16px 18px;min-height:64px;margin-bottom:12px;
+    text-decoration:none;color:var(--ink);box-shadow:0 10px 24px rgba(46,26,74,.10);}
   .act:hover,.act:focus-visible{border-color:var(--gold);}
   .act svg{width:23px;height:23px;flex:0 0 auto;color:var(--purple);}
   .act .txt{min-width:0;}
@@ -71,14 +88,10 @@
   .save{display:block;text-align:center;background:var(--gold);color:#3d025f;text-decoration:none;
     padding:18px;border-radius:15px;font-weight:600;font-size:18px;margin:20px 0 8px;border:1px solid var(--gold);}
   .save:hover,.save:focus-visible{background:var(--gold-light);}
-  .note{text-align:center;color:#d9c9ea;font-size:14px;margin:0;}
-
-  .foot{text-align:center;color:#cdbde2;font-size:13.5px;padding:30px 0 44px;line-height:1.7;}
-  .foot a{color:#f0e0ac;}
-  .foot .wm{font-family:var(--script);font-size:22px;color:#f0e0ac;display:block;margin-bottom:6px;}
+  .note{text-align:center;color:var(--muted);font-size:14px;margin:0;}
 
   @media (max-width:420px){
-    .name{font-size:23px;}
+    .name{font-size:19px;}
     .act b{font-size:17px;}
   }
 </style>
@@ -86,32 +99,61 @@
 <body>
 
 <div class="wrap">
-  <p class="tagline">More Freedom<i>&#9829;</i>More Time<i>&#9829;</i>More You</p>
 
-  <div class="brand">
-    <div class="aura"></div>
-    <svg class="lotus" viewBox="0 0 240 150" aria-hidden="true">
-      <defs>
-        <linearGradient id="lg" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#b0861f"/><stop offset="35%" stop-color="#e0c163"/><stop offset="70%" stop-color="#f7ecc0"/><stop offset="100%" stop-color="#efdc9e"/></linearGradient>
-        <linearGradient id="lp" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#33164f"/><stop offset="45%" stop-color="#5b2c92"/><stop offset="100%" stop-color="#9d63c8"/></linearGradient>
-        <radialGradient id="ball" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#fdf3c8"/><stop offset="45%" stop-color="#e2c161"/><stop offset="100%" stop-color="#a97c14"/></radialGradient>
-      </defs>
-      <path d="M114 126 C88 122 58 126 32 137 C64 146 98 140 116 130 Z" fill="url(#lg)" stroke="#b8912a" stroke-width="1.1"/>
-      <path d="M126 126 C152 122 182 126 208 137 C176 146 142 140 124 130 Z" fill="url(#lg)" stroke="#b8912a" stroke-width="1.1"/>
-      <path d="M116 122 C90 117 54 102 47 74 C80 74 107 96 117 122 Z" fill="url(#lp)" stroke="#c9a227" stroke-width="1.3" stroke-opacity=".9"/>
-      <path d="M124 122 C150 117 186 102 193 74 C160 74 133 96 123 122 Z" fill="url(#lp)" stroke="#c9a227" stroke-width="1.3" stroke-opacity=".9"/>
-      <path d="M120 116 C88 104 79 62 93 39 C107 63 117 94 120 116 Z" fill="url(#lg)" stroke="#b8912a" stroke-width="1.2"/>
-      <path d="M120 116 C152 104 161 62 147 39 C133 63 123 94 120 116 Z" fill="url(#lg)" stroke="#b8912a" stroke-width="1.2"/>
-      <path d="M120 116 C107 96 105 62 120 48 C135 62 133 96 120 116 Z" fill="url(#lg)" stroke="#b8912a" stroke-width="1.2"/>
-      <circle cx="120" cy="40" r="10" fill="url(#ball)"/>
-    </svg>
-    <div class="word">Rise and Balance</div>
-    <div class="rule"></div>
-    <h1 class="name">SANDRA ROSE</h1>
-    <p class="title">Founder</p>
+  <div class="front">
+    <div class="deco">
+      <div class="sunburst"></div>
+      <svg class="rays" viewBox="0 0 200 200" aria-hidden="true">
+        <g stroke="#c9a227" stroke-width="0.7" stroke-linecap="round">
+          <line x1="100" y1="100" x2="100" y2="14"/><line x1="100" y1="100" x2="100" y2="14" transform="rotate(15 100 100)"/>
+          <line x1="100" y1="100" x2="100" y2="14" transform="rotate(30 100 100)"/><line x1="100" y1="100" x2="100" y2="14" transform="rotate(45 100 100)"/>
+          <line x1="100" y1="100" x2="100" y2="14" transform="rotate(60 100 100)"/><line x1="100" y1="100" x2="100" y2="14" transform="rotate(75 100 100)"/>
+          <line x1="100" y1="100" x2="100" y2="14" transform="rotate(90 100 100)"/><line x1="100" y1="100" x2="100" y2="14" transform="rotate(105 100 100)"/>
+          <line x1="100" y1="100" x2="100" y2="14" transform="rotate(120 100 100)"/><line x1="100" y1="100" x2="100" y2="14" transform="rotate(135 100 100)"/>
+          <line x1="100" y1="100" x2="100" y2="14" transform="rotate(150 100 100)"/><line x1="100" y1="100" x2="100" y2="14" transform="rotate(165 100 100)"/>
+          <line x1="100" y1="100" x2="100" y2="14" transform="rotate(180 100 100)"/><line x1="100" y1="100" x2="100" y2="14" transform="rotate(195 100 100)"/>
+          <line x1="100" y1="100" x2="100" y2="14" transform="rotate(210 100 100)"/><line x1="100" y1="100" x2="100" y2="14" transform="rotate(225 100 100)"/>
+          <line x1="100" y1="100" x2="100" y2="14" transform="rotate(240 100 100)"/><line x1="100" y1="100" x2="100" y2="14" transform="rotate(255 100 100)"/>
+          <line x1="100" y1="100" x2="100" y2="14" transform="rotate(270 100 100)"/><line x1="100" y1="100" x2="100" y2="14" transform="rotate(285 100 100)"/>
+          <line x1="100" y1="100" x2="100" y2="14" transform="rotate(300 100 100)"/><line x1="100" y1="100" x2="100" y2="14" transform="rotate(315 100 100)"/>
+          <line x1="100" y1="100" x2="100" y2="14" transform="rotate(330 100 100)"/><line x1="100" y1="100" x2="100" y2="14" transform="rotate(345 100 100)"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="photo">
+      <picture>
+        <source srcset="../sandra-hero.webp" type="image/webp">
+        <img src="../sandra-hero.png" alt="Sandra Rose, founder of Rise and Balance" width="608" height="810">
+      </picture>
+    </div>
+
+    <div class="mark">
+      <svg class="lotus" viewBox="0 0 240 150" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#b0861f"/><stop offset="35%" stop-color="#e0c163"/><stop offset="70%" stop-color="#f7ecc0"/><stop offset="100%" stop-color="#efdc9e"/></linearGradient>
+          <linearGradient id="lp" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#33164f"/><stop offset="45%" stop-color="#5b2c92"/><stop offset="100%" stop-color="#9d63c8"/></linearGradient>
+          <radialGradient id="ball" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#fdf3c8"/><stop offset="45%" stop-color="#e2c161"/><stop offset="100%" stop-color="#a97c14"/></radialGradient>
+        </defs>
+        <path d="M114 126 C88 122 58 126 32 137 C64 146 98 140 116 130 Z" fill="url(#lg)" stroke="#b8912a" stroke-width="1.1"/>
+        <path d="M126 126 C152 122 182 126 208 137 C176 146 142 140 124 130 Z" fill="url(#lg)" stroke="#b8912a" stroke-width="1.1"/>
+        <path d="M116 122 C90 117 54 102 47 74 C80 74 107 96 117 122 Z" fill="url(#lp)" stroke="#c9a227" stroke-width="1.3" stroke-opacity=".9"/>
+        <path d="M124 122 C150 117 186 102 193 74 C160 74 133 96 123 122 Z" fill="url(#lp)" stroke="#c9a227" stroke-width="1.3" stroke-opacity=".9"/>
+        <path d="M120 116 C88 104 79 62 93 39 C107 63 117 94 120 116 Z" fill="url(#lg)" stroke="#b8912a" stroke-width="1.2"/>
+        <path d="M120 116 C152 104 161 62 147 39 C133 63 123 94 120 116 Z" fill="url(#lg)" stroke="#b8912a" stroke-width="1.2"/>
+        <path d="M120 116 C107 96 105 62 120 48 C135 62 133 96 120 116 Z" fill="url(#lg)" stroke="#b8912a" stroke-width="1.2"/>
+        <circle cx="120" cy="40" r="10" fill="url(#ball)"/>
+      </svg>
+      <div class="word">Rise and Balance</div>
+      <div class="rule"></div>
+      <h1 class="name">SANDRA ROSE</h1>
+      <p class="title">Founder</p>
+    </div>
   </div>
 
-  <div class="actions">
+  <div class="band"><span>More Freedom<i>&#9829;</i>More Time<i>&#9829;</i>More You</span></div>
+
+  <div class="contact">
     <a class="act" href="tel:+17022085454">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h4l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg>
       <span class="txt"><span class="lbl">Call</span><b>702-208-5454</b></span>
@@ -129,16 +171,11 @@
       <span class="txt"><span class="lbl">Email</span><b>Riseandbalance101@gmail.com</b></span>
       <span class="go">&rsaquo;</span>
     </a>
+
+    <a class="save" href="../sandra-rose.vcf" download>Save to contacts</a>
+    <p class="note">Adds Sandra to your phone's address book.</p>
   </div>
 
-  <a class="save" href="../sandra-rose.vcf" download>Save to contacts</a>
-  <p class="note">Adds Sandra to your phone's address book.</p>
-
-  <p class="foot">
-    <span class="wm">Rise and Balance</span>
-    Rise and Balance helps business owners find every place their business depends on them, then installs the systems that remove it.
-    <br><a href="../">More about how that works</a>
-  </p>
 </div>
 
 </body>
