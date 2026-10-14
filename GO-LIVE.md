@@ -95,7 +95,7 @@ live site and confirm the email.
 
 ## What is already done
 
-- Phone number `(702) 208-5454` in all six places: `telephone`, `contactPoint.telephone`,
+- Phone number `(720) 208-5454` in all six places: `telephone`, `contactPoint.telephone`,
   `servicePhone`, and both visible footers. Verified, no old number remains.
 - Booking form wired to a live endpoint (was a placeholder that posted nowhere).
 - Schema validates: one JSON-LD block, parses, no dangling `@id` references.
