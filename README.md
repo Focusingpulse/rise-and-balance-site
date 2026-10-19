@@ -23,8 +23,9 @@ Edit in the vault, then push here. Do not let the two drift.
   custom domain is deliberately unset, because setting a custom domain before DNS
   resolves makes the `github.io` URL redirect to a dead host and the preview breaks.
 - `robots.txt` is set to `Disallow: /` and every page carries `noindex, nofollow`.
-- The booking button is a placeholder. Contact details, photographs, and the booking
-  mechanism do not exist yet.
+- The contact section embeds the Rise and Balance Jotform app. Email and SMS
+  notifications must be configured and tested in Jotform; the embed alone does
+  not enable them.
 
 ## Go-live checklist
 

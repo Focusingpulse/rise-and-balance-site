@@ -84,12 +84,13 @@ Repo → Settings → Pages:
 
 ---
 
-## Step 4 — the one-time form confirmation
+## Step 4 — verify the Jotform notifications
 
-The booking form posts to FormSubmit. **The first submission emails
-`Riseandbalance101@gmail.com` a confirmation link.** Click it once or later
-submissions are silently dropped. Do this yourself — submit the form once from the
-live site and confirm the email.
+The homepage embeds the Rise and Balance Jotform app. The old FormSubmit form
+and its one-time confirmation requirement have been removed. Configure email
+and SMS notifications in Jotform itself; embedding the form does not enable
+either notification. Submit one test response from the live site and confirm
+both alerts reach the intended recipients before relying on the form.
 
 ---
 
@@ -97,7 +98,7 @@ live site and confirm the email.
 
 - Phone number `(720) 208-5454` in all six places: `telephone`, `contactPoint.telephone`,
   `servicePhone`, and both visible footers. Verified, no old number remains.
-- Booking form wired to a live endpoint (was a placeholder that posted nowhere).
+- Booking form embedded from Jotform (notification delivery requires a test submission).
 - Schema validates: one JSON-LD block, parses, no dangling `@id` references.
 - Mobile at 390px: no horizontal overflow on either page.
 - `robots.txt`, `sitemap.xml`, `.nojekyll`, favicons, `og-image`, `apple-touch-icon` present.

@@ -218,24 +218,8 @@
     margin-top:26px;border-top:1px solid rgba(255,255,255,.22);padding-top:22px;
     color:#dcd0e8;
   }
-  /* ---------- the booking form ----------
-     A real, semantic form so that a person and an AI agent can both complete it.
-     Proper <label> elements, name attributes, and a standard submit button.
-     Inputs are 17px so iOS Safari does not zoom the page when one is focused. */
-  .bookform{max-width:540px;margin:8px 0 0;}
-  .bookform .fld{margin:0 0 15px;}
-  .bookform label{display:block;font-size:15px;color:#dcd0e8;margin:0 0 6px;}
-  .bookform input[type=text],
-  .bookform input[type=email],
-  .bookform textarea{
-    width:100%;box-sizing:border-box;padding:11px 13px;
-    font-family:var(--serif);font-size:17px;line-height:1.5;color:var(--ink);
-    background:#fff;border:1px solid #b9a7d6;border-radius:2px;
-  }
-  .bookform textarea{resize:vertical;}
-  .bookform input:focus,.bookform textarea:focus{outline:2px solid var(--gold);outline-offset:1px;}
-  .bookform .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
-  .bookform button.btn{font-family:var(--serif);cursor:pointer;}
+  /* Keep the Jotform app inside the page's mobile content width. */
+  .booking-embed{display:block;width:100%;max-width:540px;height:760px;border:0;margin:8px 0 0;background:#fff;}
 
   /* ---------- footer ---------- */
   footer{background:var(--purple-deep);color:var(--purple-soft);font-size:15px;padding:40px 0 52px;}
@@ -678,36 +662,8 @@
     <h2>Book the conversation</h2>
     <p>Thirty minutes. No slides.</p>
 
-    <!--
-      A REAL FORM, so that a person and an AI agent can both complete it.
-      Posts to FormSubmit, which needs no account and no monthly fee.
-      âš  ONE-TIME STEP: FormSubmit emails Riseandbalance101@gmail.com the first time
-      this form is submitted. Click the confirmation link in that email once, or
-      nothing after it will be delivered. That is the whole setup.
-    -->
-    <form class="bookform" action="https://formsubmit.co/Riseandbalance101@gmail.com" method="POST">
-      <div class="fld">
-        <label for="f-name">Your name</label>
-        <input id="f-name" name="name" type="text" autocomplete="name" required>
-      </div>
-      <div class="fld">
-        <label for="f-email">Your email</label>
-        <input id="f-email" name="email" type="email" autocomplete="email" required>
-      </div>
-      <div class="fld">
-        <label for="f-question">Where does your business depend on you most right now?</label>
-        <textarea id="f-question" name="question" rows="3" required></textarea>
-      </div>
-      <!-- Honeypot. Hidden from people and from assistive technology; a bot will fill it. -->
-      <div class="hp" aria-hidden="true">
-        <label for="f-gotcha">Leave this empty</label>
-        <input id="f-gotcha" name="_honey" type="text" tabindex="-1" autocomplete="off">
-      </div>
-      <input type="hidden" name="_subject" value="Rise and Balance: new booking request">
-      <button class="btn" type="submit">Book the conversation</button>
-    </form>
-
-    <p class="underbtn" style="margin-top:18px;">Three fields and nothing else: your name, your email, and that one question.</p>
+    <iframe class="booking-embed" title="Rise and Balance inquiry form" src="https://app.jotform.com/262916862098167?appEmbedded=1" loading="lazy"></iframe>
+    <p class="underbtn" style="margin-top:18px;">If the form does not load, <a class="plain" href="https://app.jotform.com/262916862098167?appEmbedded=1" target="_blank" rel="noopener noreferrer">open it in a new tab</a>.</p>
     <p style="color:#dcd0e8;margin-top:14px;">The question is the whole point. Answer it and we arrive already knowing where to start, instead of spending the first twenty minutes finding out.</p>
     <p class="contact-block">
       Prefer to just write or call?<br>
